@@ -1,0 +1,4630 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic -->
+    <meta charset="UTF-8" />
+    <title>English! My Way.</title>
+    <meta
+      name="description"
+      content="English! My Way. — Precision-engineered tools to streamline your path to English fluency through structured, neural-aligned learning."
+    />
+    <meta name="author" content="English! My Way." />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href='data:image/svg+xml,
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <defs>
+        <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="%236a11cb"/>
+          <stop offset="100%" stop-color="%232575fc"/>
+        </linearGradient>
+      </defs>
+      <path d="M12 2L4 20L12 17L20 20L12 2Z" fill="url(%23g)"/>
+      <circle cx="12" cy="12" r="3" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="0.5"/>
+    </svg>'
+    />
+    <!-- Viewport (fixed your mobile behavior slightly) -->
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <!-- Theme Color (for mobile browser UI) -->
+    <meta name="theme-color" content="#02040a" />
+    <!-- Optional: Smooth rendering -->
+    <meta name="color-scheme" content="dark" />
+    <!-- Styling -->
+    <style>
+      :root {
+        /* --- LAYER 0: BACK-FIRST (Canvas & Gradients) --- */
+        --bg-canvas: #02040a;
+        --bg-gradient-start: #161b22;
+        --bg-gradient-end: #02040a;
+
+        /* --- LAYER 1: FIRST LAYER (Structural Surfaces) --- */
+        --surface-primary: rgba(16, 23, 35); /* Your glass sidebar */
+        --surface-primary-border: rgba(255, 255, 255, 0.12);
+
+        /* --- LAYER 2: SECOND LAYER (Interactive Cards & Elements) --- */
+        --surface-secondary: rgba(255, 255, 255, 0.03); /* Nav cards, inputs */
+        --surface-secondary-hover: rgba(255, 255, 255, 0.07);
+        --surface-secondary-border: rgba(255, 255, 255, 0.12);
+
+        /* --- FEEDBACK & ACCENTS --- */
+        --accent: #3498db;
+        --accent-glow: rgba(52, 152, 219, 0.3);
+        --text-pure: #ffffff;
+        --text-muted: rgba(255, 255, 255, 0.6);
+
+        --text-dim: #3498dbd3;
+      }
+      [data-theme="2"] {
+        /* --- LAYER 0: BACK-FIRST (Canvas & Gradients) --- */
+        --bg-canvas: #f8f9fa;
+        --bg-gradient-start: #e9ecef;
+        --bg-gradient-end: #f8f9fa;
+
+        /* --- LAYER 1: FIRST LAYER (Structural Surfaces) --- */
+        --surface-primary: rgba(255, 255, 255);
+        --surface-primary-border: rgba(0, 0, 0, 0.52);
+
+        /* --- LAYER 2: SECOND LAYER (Interactive Cards & Elements) --- */
+        --surface-secondary: rgba(0, 0, 0, 0.02);
+        --surface-secondary-hover: rgba(0, 0, 0, 0.05);
+        --surface-secondary-border: rgba(0, 0, 0, 0.1);
+
+        /* --- FEEDBACK & ACCENTS --- */
+        --accent: #2563eb;
+        --accent-glow: rgba(37, 99, 235, 0.2);
+        --text-pure: #111827;
+        --text-muted: rgba(17, 24, 39, 0.6);
+
+        --text-dim: rgba(17, 24, 39);
+      }
+      [data-theme="3"] {
+        /* --- LAYER 0: BACK-FIRST (Canvas) --- */
+        --bg-canvas: #0a080d;
+        --bg-gradient-start: #1a1622;
+        --bg-gradient-end: #0a080d;
+
+        /* --- LAYER 1: FIRST LAYER (Structural) --- */
+        --surface-primary: rgba(25, 20, 35);
+        --surface-primary-border: rgba(180, 160, 220, 0.12);
+
+        /* --- LAYER 2: SECOND LAYER (Interactive) --- */
+        --surface-secondary: rgba(220, 200, 255, 0.03);
+        --surface-secondary-hover: rgba(220, 200, 255, 0.08);
+        --surface-secondary-border: rgba(180, 160, 220, 0.15);
+
+        /* --- FEEDBACK & ACCENTS (Sophisticated Gold/Violet) --- */
+        --accent: #d4af37; /* Refined Gold */
+        --accent-glow: rgba(212, 175, 55, 0.2);
+
+        --text-pure: #f4eef9;
+        --text-muted: rgba(200, 190, 220, 0.6);
+        --text-dim: rgba(200, 190, 220, 0.5);
+      }
+      [data-theme="4"] {
+        /* --- LAYER 0: BACK-FIRST --- */
+        --bg-canvas: #ffffff;
+        --bg-gradient-start: #f1f5f9;
+        --bg-gradient-end: #ffffff;
+
+        /* --- LAYER 1: FIRST LAYER --- */
+        --surface-primary: rgba(241, 245, 249);
+        --surface-primary-border: rgba(0, 0, 0, 0.52);
+
+        /* --- LAYER 2: SECOND LAYER --- */
+        --surface-secondary: rgba(0, 0, 0, 0.04);
+        --surface-secondary-hover: rgba(0, 0, 0, 0.08);
+        --surface-secondary-border: rgba(0, 0, 0, 0.15);
+
+        /* --- FEEDBACK & ACCENTS --- */
+        --accent: #000000;
+        --accent-glow: rgba(0, 0, 0, 0.1);
+
+        --text-pure: #000000;
+        --text-muted: rgba(0, 0, 0, 0.5);
+        --text-dim: rgba(0, 0, 0);
+      }
+      [data-theme="5"] {
+        /* --- LAYER 0: Opal/Milk Canvas --- */
+        --bg-canvas: #fcfcfc;
+        --bg-gradient-start: #f0f0f0;
+        --bg-gradient-end: #fcfcfc;
+
+        /* --- LAYER 1: Structural Surfaces --- */
+        --surface-primary: rgba(255, 255, 255);
+        --surface-primary-border: rgba(200, 200, 200);
+
+        /* --- LAYER 2: Interactive Cards --- */
+        --surface-secondary: rgba(230, 230, 230, 0.4);
+        --surface-secondary-hover: rgba(220, 220, 220, 0.6);
+        --surface-secondary-border: rgba(200, 200, 200, 0.5);
+
+        /* --- FEEDBACK --- */
+        --accent: #5e5e5e;
+        --accent-glow: rgba(0, 0, 0, 0.05);
+        --text-pure: #2e2e2e;
+        --text-muted: rgba(80, 80, 80, 0.6);
+        --text-dim: #2e2e2e;
+      }
+      [data-theme="6"] {
+        /* --- LAYER 0: Pure Velocity Canvas --- */
+        --bg-canvas: #000000;
+        --bg-gradient-start: #0a0a0a;
+        --bg-gradient-end: #000000;
+
+        /* --- LAYER 1: Structural Surfaces --- */
+        --surface-primary: rgba(15, 15, 15);
+        --surface-primary-border: rgba(255, 255, 255, 0.12);
+
+        /* --- LAYER 2: Interactive Cards --- */
+        --surface-secondary: rgba(255, 255, 255, 0.02);
+        --surface-secondary-hover: rgba(255, 255, 255, 0.05);
+        --surface-secondary-border: rgba(255, 255, 255, 0.1);
+
+        /* --- FEEDBACK & ACCENTS (The 'Solar' Pulse) --- */
+        --accent: #ffb400; /* Intense Solar Gold */
+        --accent-glow: rgba(255, 180, 0, 0.3);
+
+        --text-pure: #ffffff;
+        --text-muted: rgba(255, 255, 255, 0.5);
+        --text-dim: #ffb400;
+        /* --text-dim: rgb(0, 0, 0, 0.5); */
+      }
+      [data-theme="7"] {
+        --bg-canvas: #000000;
+        --bg-gradient-start: #1a0000;
+        --bg-gradient-end: #000000;
+        --surface-primary: #1a0000; /* Solid, no alpha for contrast */
+        --surface-primary-border: #4a0000;
+        --surface-secondary: #330000;
+        --surface-secondary-hover: #520000;
+        --surface-secondary-border: #7a0000;
+        --accent: #ff3333; /* Brighter Red */
+        --accent-glow: rgba(255, 51, 51, 0.4);
+        --text-pure: #ffffff;
+        --text-muted: #cccccc;
+        --text-dim: #ff9999;
+      }
+      [data-theme="8"] {
+        --bg-canvas: #040a09;
+        --bg-gradient-start: #0f241d;
+        --bg-gradient-end: #040a09;
+        --surface-primary: #0f241d;
+        --surface-primary-border: #2d6b56;
+        --surface-secondary: #1a3d32;
+        --surface-secondary-hover: #265c4b;
+        --surface-secondary-border: #3d8f75;
+        --accent: #7cfc00; /* Neon Lime for high contrast */
+        --accent-glow: rgba(124, 252, 0, 0.3);
+        --text-pure: #ffffff;
+        --text-muted: #b3c2be;
+        --text-dim: #e0f2ec;
+      }
+      [data-theme="9"] {
+        --bg-canvas: #f5eadd; /* Lighter background */
+        --bg-gradient-start: #e0d0c0;
+        --bg-gradient-end: #f5eadd;
+        --surface-primary: #e6d5c5;
+        --surface-primary-border: #a68a70;
+        --surface-secondary: #d1bba7;
+        --surface-secondary-hover: #bda590;
+        --surface-secondary-border: #8c735d;
+        --accent: #8b4513; /* Dark Saddle Brown for contrast */
+        --accent-glow: rgba(139, 69, 19, 0.2);
+        --text-pure: #000000;
+        --text-muted: #332920;
+        --text-dim: #5c4b3d;
+      }
+      [data-theme="10"] {
+        --bg-canvas: #0a1129;
+        --bg-gradient-start: #162657;
+        --bg-gradient-end: #0a1129;
+        --surface-primary: #162657;
+        --surface-primary-border: #4a6fa5;
+        --surface-secondary: #253d82;
+        --surface-secondary-hover: #3455b5;
+        --surface-secondary-border: #5d82d4;
+        --accent: #ccff00; /* Electric Lime */
+        --accent-glow: rgba(204, 255, 0, 0.4);
+        --text-pure: #ffffff;
+        --text-muted: #d1d9f0;
+        --text-dim: #e6ff80;
+      }
+      [data-theme="11"] {
+        --bg-canvas: #fffaf0; /* Floral White */
+        --bg-gradient-start: #fff8dc;
+        --bg-gradient-end: #fffaf0;
+        --surface-primary: #fff8dc; /* Cornsilk */
+        --surface-primary-border: #f0e68c;
+        --surface-secondary: #faebd7; /* Antique White */
+        --surface-secondary-hover: #ffe4c4;
+        --surface-secondary-border: #cd853f; /* Peru */
+        --accent: #800080; /* Purple from the bottom of image 10 */
+        --accent-glow: rgba(128, 0, 128, 0.3);
+        --text-pure: #191970; /* Midnight Blue */
+        --text-muted: #483d8b; /* Dark Slate Blue */
+        --text-dim: #191970db;
+      }
+      [data-theme="12"] {
+        --bg-canvas: #000000;
+        --bg-gradient-start: #0a0a0a;
+        --bg-gradient-end: #000000;
+        --surface-primary: #0a0a0a;
+        --surface-primary-border: #333333;
+        --surface-secondary: #1a1a1a;
+        --surface-secondary-hover: #262626;
+        --surface-secondary-border: #4d4d4d;
+        --accent: #ff69b4; /* Hot Pink */
+        --accent-glow: rgba(255, 105, 180, 0.4);
+        --text-pure: #ffffff;
+        --text-muted: #cccccc;
+        --text-dim: #ba55d3; /* Medium Orchid */
+      }
+      [data-theme="13"] {
+        --bg-canvas: #1a0a14;
+        --bg-gradient-start: #2e1026;
+        --bg-gradient-end: #1a0a14;
+        --surface-primary: #2e1026; /* Solid dark pink background for content */
+        --surface-primary-border: #5c1f4a;
+        --surface-secondary: #4a1538; /* Rich deep pink for card areas */
+        --surface-secondary-hover: #7a205a;
+        --surface-secondary-border: #ff0080; /* High contrast neon pink for borders */
+        --accent: #ff0080; /* Neon Pink for high visibility contrast */
+        --accent-glow: rgba(255, 0, 128, 0.4);
+        --text-pure: #ffffff;
+        --text-muted: #e0b0ce;
+        --text-dim: #ff80bf; /* Soft pink for secondary headers/info */
+      }
+      :root,
+      [data-theme] {
+        /* Forces the browser to handle scrollbar colors and form styles automatically */
+        color-scheme: light dark;
+
+        /* The "Fancy" Transition */
+        transition:
+          background-color 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+          color 0.6s ease,
+          border-color 0.6s ease,
+          box-shadow 0.6s ease;
+      }
+
+      /* Force smooth scrolling for a premium feel */
+      html {
+        scroll-behavior: smooth;
+      }
+      * {
+        -webkit-tap-highlight-color: transparent;
+        box-sizing: border-box;
+        /* Firefox Scrollbars */
+        scrollbar-width: thin;
+        scrollbar-color: var(--surface-secondary-hover) transparent;
+      }
+
+      /* --- TRANSPARENT SCROLLBARS (WEBKIT) --- */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--surface-secondary-hover);
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--surface-secondary-border);
+      }
+
+      /* --- BODY & LAYOUT SYSTEM --- */
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          sans-serif;
+        background: var(--bg-canvas);
+        background-image: radial-gradient(
+          circle at 0% 0%,
+          var(--bg-gradient-start) 0%,
+          var(--bg-gradient-end) 100%
+        );
+        color: var(--text-pure);
+        margin: 0;
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      /* --- SIDEBAR STATE CONTROLS --- */
+      body.sidebar-collapsed .sidebar {
+        width: 80px;
+        padding: 30px 15px;
+      }
+      body.sidebar-collapsed .logo-text,
+      body.sidebar-collapsed .nav-group,
+      body.sidebar-collapsed .nav-label,
+      body.sidebar-collapsed .btn-submit1,
+      body.sidebar-collapsed .mastery-meter {
+        display: none;
+      }
+      body.sidebar-collapsed .secondboy {
+        display: block;
+      }
+      body.sidebar-collapsed .nav-card {
+        justify-content: center;
+      }
+
+      .secondboy {
+        display: none;
+      }
+
+      /* --- SIDEBAR COMPONENTS --- */
+      .sidebar {
+        width: 280px;
+        background: var(--surface-primary);
+        backdrop-filter: blur(25px);
+        border-right: 1px solid var(--surface-primary-border);
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        z-index: 10;
+        flex-shrink: 0;
+        transition:
+          width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+          padding 0.3s ease;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        margin-bottom: 50px;
+        position: relative; /* Context for absolute positioned icons */
+        justify-content: space-between;
+      }
+
+      .nexus-icon {
+        width: 40px;
+        height: 40px;
+        filter: drop-shadow(0 0 8px var(--accent-glow));
+        cursor: pointer;
+        position: absolute;
+        top: 8px;
+        left: -40px;
+      }
+
+      .logo-text h2 {
+        font-size: 1.2rem;
+        margin: 0;
+        letter-spacing: 3px;
+        font-weight: 900;
+        background: linear-gradient(to right, var(--text-pure), var(--accent));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .logo-text span {
+        font-size: 0.55rem;
+        letter-spacing: 2px;
+        color: var(--text-muted);
+        font-weight: 700;
+      }
+
+      /* --- NAVIGATION LAYOUT --- */
+      .nav-group {
+        margin-bottom: 30px;
+      }
+
+      .nav-label {
+        font-size: 0.6rem;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        display: block;
+        cursor: pointer;
+      }
+
+      .nav-card {
+        padding: 12px 15px;
+        border-radius: 12px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+        border: 1px solid transparent;
+        transition:
+          background 0.2s,
+          border-color 0.2s,
+          color 0.2s;
+      }
+
+      .nav-card:hover {
+        background: var(--surface-secondary);
+      }
+
+      .nav-card.active {
+        background: var(--accent-glow);
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      /* --- METERS & PROGRESS SYSTEMS --- */
+      .mastery-meter {
+        margin-bottom: 30px;
+      }
+
+      .progress-bar {
+        height: 4px;
+        background: var(--accent-glow);
+        border-radius: 2px;
+        margin-top: 10px;
+        overflow: hidden;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background: var(--accent);
+        width: 0%;
+        transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* --- MAIN CONTENT HOST --- */
+      .main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: margin-left 0.3s ease;
+      }
+
+      .content-area {
+        flex: 1;
+        padding: 30px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .view {
+        display: none;
+        animation: fadeIn 0.3s ease;
+      }
+
+      .view.active {
+        display: block;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* --- UI BADGES & TYPOGRAPHY --- */
+      .badge {
+        display: inline-block;
+        font-size: 0.6rem;
+        padding: 4px 12px;
+        background: var(--accent-glow);
+        color: var(--accent);
+        border: 1px solid var(--accent);
+        border-radius: 100px;
+        letter-spacing: 2px;
+      }
+
+      /* --- FEATURE CARDS GRID --- */
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .feature-card {
+        background: var(--surface-secondary);
+        border: 1px solid var(--surface-secondary-border);
+        padding: 25px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .feature-card:hover {
+        background: var(--surface-secondary-hover);
+        border-color: var(--accent);
+        transform: translateY(-5px);
+      }
+
+      .feature-icon {
+        font-size: 1.5rem;
+        color: var(--accent);
+        margin-bottom: 15px;
+      }
+
+      .feature-card h3 {
+        margin: 0 0 10px 0;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+      }
+
+      .feature-card p {
+        margin: 0;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
+
+      /* --- STUDY PIPELINE SYSTEM --- */
+      .study-pipeline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+        background: var(--surface-primary);
+        border-bottom: 1px solid var(--surface-primary-border);
+        backdrop-filter: blur(10px);
+      }
+
+      .pipeline-group {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .arrow {
+        color: var(--text-muted);
+        opacity: 0.5;
+        font-weight: 200;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      /* --- SEARCH BAR ENGINE --- */
+
+      .search-icon {
+        position: absolute;
+        left: 12px;
+        font-size: 1.6rem;
+        color: var(--accent);
+        pointer-events: none;
+      }
+
+      #global-search {
+        background: var(--surface-secondary);
+        border: 1px solid var(--surface-secondary-border);
+        border-radius: 8px;
+        color: var(--text-pure);
+        padding: 8px 12px 8px 35px;
+        font-size: 0.85rem;
+        width: 180px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        outline: none;
+      }
+
+      #global-search:focus {
+        width: 240px;
+        background: var(--surface-secondary-hover);
+        border-color: var(--accent);
+        box-shadow: 0 0 15px var(--accent-glow);
+      }
+
+      #global-search::placeholder {
+        color: var(--text-muted);
+        opacity: 0.5;
+      }
+      /* --- UTILITY BUTTONS --- */
+      .btn-info {
+        background: #ff4d4d; /* Assuming standard danger red */
+        color: #ffffff;
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        font-weight: 900;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        box-shadow: 0 0 10px rgba(248, 81, 73, 0.3);
+        transition:
+          transform 0.2s,
+          filter 0.2s;
+        margin-left: auto;
+      }
+
+      .btn-info:hover {
+        transform: scale(1.1);
+        filter: brightness(1.2);
+      }
+
+      .btn-nuclear {
+        background: rgba(255, 70, 70, 0.1);
+        border: 1px solid rgba(255, 70, 70, 0.2);
+        color: #ff4646;
+        width: 28px;
+        height: 28px;
+        border-radius: 6px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: all 0.3s;
+      }
+
+      .btn-nuclear:hover {
+        background: #ff4646;
+        color: #ffffff;
+        transform: rotate(360deg);
+      }
+
+      /* --- DATA CARDS DISPLAY ENGINE --- */
+      #card-container,
+      #search-results-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        align-items: start;
+        min-width: 0;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .card-item {
+        border: 1px solid var(--surface-primary-border);
+        background: var(--surface-primary);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+        transition:
+          transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+          box-shadow 0.4s ease,
+          border-color 0.3s ease,
+          background 0.3s ease;
+      }
+
+      /* Sequential entry animation delays */
+      #card-container .card-item:nth-child(1),
+      #search-results-container .card-item:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      #card-container .card-item:nth-child(2),
+      #search-results-container .card-item:nth-child(2) {
+        animation-delay: 0.15s;
+      }
+      #card-container .card-item:nth-child(3),
+      #search-results-container .card-item:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      #card-container .card-item:nth-child(4),
+      #search-results-container .card-item:nth-child(4) {
+        animation-delay: 0.25s;
+      }
+      #card-container .card-item:nth-child(n + 5),
+      #search-results-container .card-item:nth-child(n + 5) {
+        animation-delay: 0.3s;
+      }
+
+      .card-item:hover,
+      .card-item.open {
+        transform: translateY(-8px) scale(1.02) !important;
+        border-color: var(--accent);
+        background: var(--surface-secondary-hover);
+        box-shadow:
+          0 15px 45px rgba(0, 0, 0, 0.5),
+          0 0 20px var(--accent-glow);
+      }
+
+      .card-header {
+        padding: 18px 25px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* Accordion Expansion Engine */
+      .card-content {
+        display: grid;
+        grid-template-rows: 0fr;
+        padding: 0 25px;
+        opacity: 0;
+        transition:
+          grid-template-rows 0.3s ease-in,
+          padding 0.3s ease,
+          opacity 0.2s ease;
+      }
+
+      .card-item.open .card-content {
+        grid-template-rows: 1fr;
+        opacity: 1;
+        padding-top: 20px;
+        padding-bottom: 25px;
+        transition:
+          grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+          padding 0.4s ease,
+          opacity 0.4s ease;
+      }
+
+      .card-content > div {
+        overflow: hidden;
+      }
+
+      /* --- BUTTON & FORM ELEMENTS --- */
+      .btn-submit {
+        background: var(--accent);
+        color: var(--bg-canvas);
+        border: none;
+        padding: 15px;
+        border-radius: 10px;
+        font-weight: 800;
+        cursor: pointer;
+        width: 100%;
+        transition: transform 0.1s;
+        margin: 0 auto 1rem auto;
+      }
+
+      .btn-submit:active {
+        transform: scale(0.98);
+      }
+
+      .btn-action {
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid var(--surface-secondary-border);
+        background: var(--surface-secondary);
+        color: var(--text-pure);
+        cursor: pointer;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .btn-delete {
+        color: #ff4d4d;
+        /* Now your component is decoupled */
+        border-color: var(--border-danger);
+      }
+
+      .mastery-form input,
+      .mastery-form textarea {
+        width: 100%;
+        background: var(--bg-canvas);
+        border: 1px solid var(--surface-secondary-border);
+        padding: 15px;
+        border-radius: 10px;
+        color: var(--text-pure);
+        margin-bottom: 20px;
+        font-size: 1rem;
+      }
+
+      .noneFull {
+        display: none;
+      }
+
+      /* Responsive Breakpoints */
+      @media (max-width: 600px) {
+        .feature-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      /* =============================================
+   MOBILE OPTIMIZATION
+   ============================================= */
+      @media (min-width: 992px) {
+        #card-container,
+        #search-results-container {
+          grid-template-columns: 1fr 1fr;
+        }
+        .card-content {
+          grid-template-columns: 1fr !important;
+          gap: 15px;
+        }
+
+        .action-column {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          border-top: 1px solid var(--surface-primary-border);
+          padding-top: 15px;
+        }
+      }
+
+      /* --- MOBILE OPTIMIZATION --- */
+      @media (max-width: 1168px) {
+        .quick-terminal-links-h {
+          display: none !important;
+        }
+      }
+      @media (max-width: 768px) {
+        .quick-terminal-links {
+          display: none !important;
+        }
+
+        body {
+          flex-direction: column;
+        }
+        .sidebar {
+          width: 100%;
+          height: auto;
+          padding: 15px;
+          border-right: none;
+          border-bottom: 1px solid var(--surface-primary-border);
+        }
+        .logo-container {
+          margin-bottom: 15px;
+        }
+        .mastery-meter {
+          display: none;
+        }
+        .nav-group {
+          display: flex;
+          gap: 8px;
+          margin-bottom: 10px;
+          overflow-x: auto;
+          padding-bottom: 5px;
+          justify-content: space-around;
+        }
+        .nav-label {
+          display: none;
+        }
+        .nav-card {
+          flex-direction: column;
+          min-width: 90px;
+          padding: 10px;
+          margin-bottom: 0;
+          text-align: center;
+          gap: 4px;
+        }
+
+        .nav-card span {
+          font-size: 0.7rem;
+        }
+        .content-area {
+          padding: 20px;
+        }
+        .card-content {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .action-column {
+          display: flex;
+          flex-direction: row;
+          gap: 8px;
+          flex-wrap: wrap;
+        }
+        .action-column button {
+          flex: 1;
+          min-width: 100px;
+          padding: 12px;
+        }
+        .btn-submit {
+          padding: 12px;
+          font-size: 0.8rem;
+        }
+        .btn-info {
+          display: none;
+        }
+        .noneFull {
+          display: flex;
+        }
+        .study-pipeline {
+          display: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        body {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          position: fixed;
+          left: -280px;
+          top: 0;
+          bottom: 0;
+          width: 280px !important;
+          height: 100vh !important;
+          transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: 20px 0 50px rgba(0, 0, 0, 0.5);
+          border-right: 1px solid var(--accent);
+          display: flex !important;
+          z-index: 2000;
+        }
+
+        .sidebar.open {
+          left: 0;
+          transform: translateX(0);
+        }
+
+        /* Mobile Header */
+        .mobile-nav-bar {
+          display: flex;
+          align-items: center;
+          padding: 15px 20px;
+          background: var(--surface-primary);
+          backdrop-filter: blur(10px);
+          border-bottom: 1px solid var(--surface-primary-border);
+          justify-content: space-between;
+          z-index: 5;
+        }
+
+        .menu-trigger {
+          font-size: 1.5rem;
+          color: var(--accent);
+          cursor: pointer !important;
+        }
+
+        /* Overlay when menu is open */
+        .sidebar-overlay {
+          display: none;
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.6);
+          backdrop-filter: blur(4px);
+          z-index: 9;
+        }
+
+        .sidebar-overlay.active {
+          display: block;
+        }
+
+        .nav-group {
+          display: block !important;
+          overflow: visible !important;
+        }
+
+        .nav-card {
+          flex-direction: row !important;
+          text-align: left !important;
+          margin-bottom: 10px !important;
+        }
+
+        .mastery-meter {
+          display: block !important;
+          margin-top: 20px;
+        }
+        .small-screen {
+          display: flex !important;
+          margin-left: auto;
+          font-size: 0.8rem;
+        }
+      }
+
+      .small-screen {
+        display: none;
+      }
+
+      @media (min-width: 769px) {
+        .mobile-nav-bar,
+        .sidebar-overlay {
+          display: none;
+        }
+      }
+
+      @media (max-width: 769px) {
+        .action-btn {
+          padding: 8px 4px !important;
+        }
+        .hero-actions {
+          margin: 4rem 0 !important;
+          gap: 10px !important;
+          justify-content: space-around;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .sidebar-mini {
+          display: none !important;
+        }
+      }
+
+      .dN {
+        display: none !important;
+      }
+
+      /* --- PROTOCOL LIST --- */
+      .dot.pulse {
+        width: 6px;
+        height: 6px;
+        background: var(--success);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--success);
+        animation: pulse-dot 1.5s infinite;
+      }
+
+      .sidebar-mini {
+        width: 72px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        background: var(--surface-primary);
+        backdrop-filter: blur(10px);
+        border-right: 1px solid var(--surface-primary-border);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px 0;
+        z-index: 1000;
+        flex-shrink: 0;
+        animation: miniEntrance 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      @keyframes miniEntrance {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      .mini-header {
+        padding: 12px 0 20px 0;
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: var(--text-muted);
+      }
+
+      .mini-nav-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .mini-card {
+        width: 50px;
+        height: 50px;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        background: var(--surface-secondary);
+        border: 1px solid transparent;
+      }
+      .mini-card:hover {
+        background: var(--accent-glow);
+        border-color: var(--accent);
+        transform: scale(1.1);
+      }
+      .mini-card.active {
+        border-color: var(--accent);
+        transform: scale(0.95);
+      }
+      .mini-icon {
+        font-size: 1.3rem;
+        /* margin-bottom: 2px; */
+      }
+
+      .mini-label {
+        position: absolute;
+        left: 110%;
+        background: var(--accent);
+        color: var(--bg-canvas);
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 0.7rem;
+        font-weight: 800;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.2s;
+        white-space: nowrap;
+        box-shadow: 0 4px 15px var(--accent-glow);
+      }
+      .mini-card:hover .mini-label {
+        opacity: 1;
+        left: 120%;
+      }
+      .mini-add {
+        margin-top: 10px;
+        color: var(--accent);
+      }
+      @media (min-width: 1200px) {
+        #sidebar-mini[style*="display: flex"]
+          ~ .main
+          .content-area
+          #card-container,
+        #sidebar-mini[style*="display: flex"]
+          ~ .main
+          .content-area
+          #search-results-container,
+        #sidebar-mini[style*="display: block"]
+          ~ .main
+          .content-area
+          #search-results-container,
+        #sidebar-mini[style*="display: block"]
+          ~ .main
+          .content-area
+          #card-container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @keyframes pulse-dot {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.5);
+          opacity: 0.5;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      #view-count-badge {
+        box-shadow: 0 0 10px var(--accent-glow);
+        font-family: "Courier New", monospace; /* Looks more technical/neural */
+        animation: fadeIn 0.3s ease;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .termTitle {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 700;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1; /* Truncate by default */
+        overflow: hidden;
+
+        /* These handle the "Leave" (Mouse-out) */
+        max-height: 1.4em;
+        transition:
+          max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+          color 0.3s ease,
+          padding-left 0.3s ease,
+          text-shadow 0.3s ease;
+      }
+      .card-item:hover .termTitle,
+      .card-item.open .termTitle {
+        -webkit-line-clamp: 10; /* Show more text */
+        max-height: 500px; /* Slide down smoothly */
+        padding-left: 8px;
+      }
+      @keyframes revealText {
+        0% {
+          -webkit-line-clamp: 1;
+          max-height: 1.4em;
+        }
+        10% {
+          /* Immediately allow more lines so the height can animate smoothly */
+          -webkit-line-clamp: 10;
+        }
+        100% {
+          -webkit-line-clamp: 10;
+          max-height: 500px; /* Large enough for full content */
+        }
+      }
+      @keyframes hideText {
+        0% {
+          -webkit-line-clamp: 10;
+          max-height: 500px;
+        }
+        90% {
+          -webkit-line-clamp: 10;
+          max-height: 1.4em;
+        }
+        100% {
+          -webkit-line-clamp: 1;
+          max-height: 1.4em;
+        }
+      }
+      /* Adding a "pressed" effect */
+      .card-item:active {
+        transform: translateY(-4px) scale(0.98); /* Dips down slightly when clicked */
+        transition: transform 0.1s ease;
+      }
+      /* 4. Smooth Icon Rotation */
+      .expand-icon {
+        transition:
+          transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 0.3s ease,
+          letter-spacing 0.3s ease;
+        opacity: 0.5;
+      }
+      .card-item:hover .expand-icon {
+        opacity: 1;
+        letter-spacing: 2px; /* Spreads the text slightly on hover */
+        color: var(--accent);
+      }
+      .card-item.open .expand-icon {
+        transform: rotate(180deg);
+        color: var(--accent);
+      }
+      /* Animations */
+      @keyframes cardEntrance {
+        from {
+          opacity: 0;
+          transform: translateY(30px) scale(0.95);
+          filter: blur(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+          filter: blur(0);
+        }
+      }
+
+      .mini-card.mini-add {
+        background: var(--accent-glow);
+        margin-top: 20px;
+        border: 1px dashed var(--accent);
+      }
+
+      .mini-card.mini-add:hover,
+      .mini-card.mini-add.active {
+        background: var(--accent);
+        color: var(--bg-canvas);
+      }
+
+      .mini-card.mini-add:hover .mini-icon {
+        color: var(--bg-canvas);
+      }
+
+      /* --- AMBIENT BACKGROUND --- */
+      .neural-grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(var(--surface-primary-border) 1px, transparent 1px),
+          linear-gradient(
+            90deg,
+            var(--surface-primary-border) 1px,
+            transparent 1px
+          );
+        background-size: 50px 50px;
+        mask-image: radial-gradient(circle at center, black, transparent 80%);
+        opacity: 1;
+        z-index: 0;
+        opacity: 0.7;
+      }
+
+      .neural-grid,
+      .ambient-glow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+        display: none;
+      }
+
+      #view-desc {
+        position: relative;
+        z-index: 1;
+        margin-top: 1rem;
+        /* overflow: hidden; */
+        width: 100%;
+        height: 93.4%;
+      }
+
+      .hero-container,
+      .fascinating-pipeline,
+      .hero-actions {
+        position: relative;
+        z-index: 10;
+      }
+
+      .ambient-glow {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        width: 400px;
+        height: 400px;
+        background: var(--accent);
+        filter: blur(150px);
+        opacity: 0.05;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+
+      /* --- THE PIPELINE NODES (NEXUS ENGINE) --- */
+      .fascinating-pipeline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        margin: 60px 0;
+        position: relative;
+        z-index: 10;
+        top: -5px;
+      }
+
+      .pipeline-node {
+        width: 120px;
+        height: 140px;
+        background: var(--surface-primary);
+        border: 1px solid var(--surface-primary-border);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        cursor: pointer;
+      }
+
+      .pipeline-node.active {
+        border-color: var(--accent);
+        box-shadow: 0 0 30px var(--accent-glow);
+        transform: scale(1.1);
+      }
+
+      .pipeline-node:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: var(--accent);
+        box-shadow: 0 0 30px var(--accent-glow);
+        transform: translateY(-2px);
+      }
+
+      .node-icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: var(--text-muted);
+        transition:
+          color 0.3s ease,
+          text-shadow 0.3s ease;
+      }
+
+      .pipeline-node.active .node-icon,
+      .pipeline-node:hover .node-icon {
+        color: var(--accent);
+        text-shadow: 0 0 10px var(--accent);
+      }
+
+      .node-label {
+        font-size: 0.7rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+      }
+
+      .node-status {
+        font-size: 0.5rem;
+        color: var(--text-muted);
+        background: rgba(255, 255, 255, 0.05);
+        padding: 2px 8px;
+        border-radius: 4px;
+      }
+
+      /* --- CONNECTORS --- */
+      .neural-connector {
+        width: 60px;
+        height: 2px;
+        background: var(--surface-primary-border);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .pulse-line {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--accent),
+          transparent
+        );
+        animation: pulse-move 2s infinite linear;
+      }
+
+      @keyframes pulse-move {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      /* --- METRICS GLASS & TERMINAL DATA --- */
+      .metrics-glass {
+        display: flex;
+        background: var(--surface-primary);
+        border: 1px solid var(--surface-primary-border);
+        padding: 20px 40px;
+        border-radius: 20px;
+        gap: 30px;
+        margin-bottom: 40px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+      .metric {
+        text-align: center;
+        flex: 1;
+      }
+
+      .metric .label {
+        display: block;
+        font-size: 0.6rem;
+        color: var(--text-muted);
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+      }
+
+      .metric .value {
+        font-family: "Courier New", monospace;
+        font-weight: 900;
+        font-size: 1.4rem;
+      }
+
+      .metric-divider {
+        width: 1px;
+        background: var(--surface-primary-border);
+      }
+
+      .glow-text {
+        text-shadow: 0 0 10px var(--accent-glow);
+        color: var(--accent);
+      }
+
+      /* --- DYNAMIC ANIMATION OVERLAYS --- */
+      .scanning-ring {
+        position: absolute;
+        inset: -5px;
+        border: 2px solid var(--accent);
+        border-radius: 18px;
+        opacity: 0;
+        pointer-events: none;
+        animation: ring-scan 2s infinite;
+      }
+
+      @keyframes ring-scan {
+        0% {
+          transform: scale(0.9);
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          transform: scale(1.1);
+          opacity: 0;
+        }
+      }
+
+      .glitch-title {
+        font-size: 4rem;
+        text-shadow: 2px 2px var(--accent-secondary);
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      .hero-actions {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 4rem 0 0;
+        position: relative;
+        z-index: 10;
+      }
+
+      .action-btn {
+        position: relative;
+        padding: 12px 28px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+      }
+
+      .action-btn.primary {
+        background: var(--accent);
+        color: var(--bg-canvas);
+        border: 1px solid var(--accent);
+        box-shadow: 0 0 20px var(--accent-glow);
+      }
+      /* --- Primary Action State --- */
+      .action-btn.primary:hover {
+        color: var(--accent);
+        /* Using text-pure as the background ensures it pops in dark mode 
+     and stays clean in light mode */
+        background: var(--text-pure);
+        border-color: var(--text-pure);
+        box-shadow: 0 0 30px var(--accent-glow);
+        transform: translateY(-2px);
+      }
+
+      /* --- Secondary Action States --- */
+      .action-btn:not(.primary) {
+        /* Maps to your secondary surface layer */
+        background: var(--surface-secondary);
+        color: var(--accent);
+        /* Uses your standard secondary border token */
+        border: 1px solid var(--surface-secondary-border);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+      }
+
+      .action-btn:not(.primary):hover {
+        /* Links the hover background to your glow token for consistent intensity */
+        background: var(--accent-glow);
+        border-color: var(--accent);
+        box-shadow: inset 0 0 10px var(--accent-glow);
+      }
+
+      /* --- METADATA ENGINE --- */
+      .top-meta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      .system-status {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 0.6rem;
+        padding: 4px 12px;
+        background: var(--bg-gradient-start);
+        color: var(--accent);
+        border: 1px solid var(--accent);
+        border-radius: 100px;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+      .system-status:hover {
+        background: var(--accent-glow);
+        transform: scale(1.1);
+      }
+      .leftB {
+        margin-left: 1rem;
+        padding-left: 2rem;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .status-dot {
+        width: 6px;
+        height: 6px;
+        background: var(--accent);
+        border-radius: 50%;
+        box-shadow: 0 0 8px var(--bg-gradient-end);
+        animation: status-pulse 2s infinite ease-in-out;
+      }
+
+      @keyframes status-pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.3;
+          transform: scale(1.2);
+        }
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+        max-width: 500px;
+        margin: 0 auto 40px auto;
+        line-height: 1.6;
+        text-align: center;
+        position: relative;
+        top: -15px;
+        color: var(--text-muted);
+      }
+
+      #search-results-container > div:only-child {
+        grid-column: 1 / -1;
+      }
+
+      .neural-scan-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .scan-ring {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 1px solid var(--accent);
+        border-radius: 50%;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        opacity: 0.3;
+        animation: spinRing 4s linear infinite;
+      }
+
+      @keyframes spinRing {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes textFlicker {
+        0%,
+        100% {
+          opacity: 0.8;
+        }
+        5% {
+          opacity: 0.4;
+        }
+        10% {
+          opacity: 0.8;
+        }
+      }
+
+      #view-search h2 {
+        animation: textFlicker 5s infinite;
+      }
+
+      #pdf-container {
+        background: linear-gradient(
+          90deg,
+          var(--bg-canvas) 25%,
+          var(--bg-canvas) 50%,
+          var(--bg-canvas) 75%
+        );
+        background-size: 200% 100%;
+        animation: scanning 2s infinite;
+      }
+
+      @keyframes scanning {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+
+      /* --- MODALS & CENTRAL SYNAPSE INTERFACES --- */
+      #vault-popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        overflow-y: auto;
+        min-height: 50%;
+        max-height: 90%;
+        padding: 30px;
+
+        /* Use Layer 1 Surface for the popup background */
+        background: var(--surface-primary);
+        border: 1px solid var(--surface-primary-border);
+        backdrop-filter: blur(20px);
+
+        /* Sync text color with theme */
+        color: var(--text-pure);
+
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        border-radius: 12px;
+        z-index: 10000;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transform: translate(-50%, -40%) scale(0.9);
+        transition:
+          opacity 0.5s ease,
+          transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+          visibility 0.5s;
+      }
+      #vault-popup.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      .synapse-content {
+        height: 100%;
+      }
+
+      #popup-term {
+        font-weight: 900;
+        margin: 0 0 10px 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+        color: var(--accent) !important;
+        text-shadow: 0 0 10px var(--accent-glow);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+      #popup-term::selection {
+        background: var(--accent);
+        color: var(--bg-canvas);
+      }
+      #popup-def {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        opacity: 1.9;
+        margin: 0;
+      }
+
+      .close-btn:hover {
+        color: #ff4d4d;
+        text-shadow: 0 0 8px #ff4d4d;
+      }
+
+      .central-synapse {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+        width: 450px;
+        max-width: 95%;
+        padding: 40px;
+        background: radial-gradient(
+          circle at center,
+          var(--bg-gradient-start),
+          var(--bg-gradient-end)
+        );
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--accent);
+        box-shadow:
+          0 0 100px rgba(0, 0, 0, 0.8),
+          0 0 40px var(--accent-glow);
+        border-radius: 20px;
+        background-color: var(--bg-canvas);
+        z-index: 10001;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      .central-synapse.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      .focus-header {
+        font-size: 0.7rem;
+        letter-spacing: 5px;
+        color: var(--accent);
+        margin-bottom: 30px;
+        opacity: 0.8;
+        text-transform: uppercase;
+      }
+
+      /* --- PIPELINE RESPONSIVE INTERFACES --- */
+      @media (max-width: 768px) {
+        .fascinating-pipeline {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin: 30px 0;
+        }
+
+        .neural-connector {
+          width: 2px;
+          height: 30px;
+          min-width: 2px;
+          margin: 5px 0;
+        }
+
+        .pulse-line {
+          background: linear-gradient(
+            180deg,
+            transparent,
+            var(--accent),
+            transparent
+          );
+        }
+
+        .pipeline-node {
+          width: 160px;
+          height: 120px;
+        }
+
+        .metrics-glass {
+          flex-direction: column;
+          padding: 20px;
+          gap: 20px;
+        }
+
+        .metric-divider {
+          width: 100%;
+          height: 1px;
+        }
+      }
+      /* =============================================
+   GLOW LINES, SELECTIONS & LAYOUT FOOTERS
+   ============================================= */
+      .glow-line {
+        border: none;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--accent),
+          transparent
+        );
+        margin: 20px auto;
+        width: 80%;
+        position: sticky;
+        top: 80px;
+        left: 0;
+        z-index: 5;
+      }
+
+      #popup-def {
+        font-size: 1rem;
+        line-height: 1.8;
+        font-weight: bold;
+        color: var(--text-pure) !important;
+      }
+
+      #popup-def::selection {
+        background: var(--accent);
+        color: var(--bg-canvas);
+      }
+
+      .focus-footer {
+        margin-top: 100px;
+        font-size: 0.75rem;
+        color: var(--accent);
+      }
+
+      .close-synapse {
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-pure);
+        transition:
+          color 0.3s ease,
+          text-shadow 0.3s ease;
+      }
+
+      .close-synapse:hover {
+        color: #ff4d4d;
+        text-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+      }
+
+      /* --- OVERLAYS, TIMERS & READOUT COUNTERS --- */
+      /* --- Global Focus Overlay --- */
+      #focus-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* background: var(--text-dim); */
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.5s ease,
+          visibility 0.5s ease;
+        z-index: 9999;
+      }
+
+      #focus-overlay.active {
+        /* High opacity variant of your canvas background */
+        opacity: 0.9;
+        visibility: visible;
+      }
+
+      /* --- Vault Index Badge --- */
+      #vault-index-count {
+        font-family: monospace;
+        /* Syncs with the dynamic accent glow */
+        background: var(--accent-glow);
+        padding: 2px 8px;
+        border-radius: 4px;
+        /* Uses the accent border to match your buttons */
+        border: 1px solid var(--accent);
+        color: var(--accent);
+      }
+
+      #focus-timer {
+        font-family: "Courier New", monospace;
+        font-size: 1.1rem;
+      }
+
+      /* --- NEURAL CONTROLS & FORM SWITCHES --- */
+      .switch-label {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+        color: var(--accent);
+        font-weight: bold;
+      }
+
+      .neural-switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+      }
+
+      .neural-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition:
+          background-color 0.4s,
+          border-color 0.4s;
+        border-radius: 20px;
+        border: 1px solid var(--surface-primary-border);
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 14px;
+        width: 14px;
+        left: 3px;
+        bottom: 2px;
+        background-color: rgba(255, 255, 255, 0.9);
+        transition:
+          transform 0.4s,
+          background-color 0.4s,
+          box-shadow 0.4s;
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--accent-glow);
+      }
+
+      input:checked + .slider {
+        background-color: rgba(255, 255, 255, 0.07);
+        border-color: var(--accent);
+      }
+
+      input:checked + .slider:before {
+        transform: translateX(20px);
+        background-color: var(--accent);
+      }
+
+      /* --- NAVIGATION ARROWS & INTERACTIVE FILE LISTS --- */
+      .nav-controls {
+        display: flex;
+        align-items: center;
+        background: var(--surface-secondary);
+        padding: 2px 8px;
+        border-radius: 6px;
+        border: 1px solid var(--surface-primary-border);
+      }
+
+      .nav-arrow {
+        cursor: pointer;
+        font-size: 1rem;
+        color: var(--accent);
+        padding: 0 10px;
+        transition:
+          color 0.2s ease,
+          transform 0.2s ease,
+          text-shadow 0.2s ease;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      .nav-arrow:hover {
+        color: var(--accent-glow);
+        text-shadow: 0 0 10px var(--accent);
+        transform: scale(1.2);
+      }
+
+      .nav-arrow:active {
+        transform: scale(0.9);
+      }
+
+      .nav-pdf-group {
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid transparent;
+        transition: border-color 0.3s ease;
+      }
+
+      .nav-pdf-group:hover {
+        border-color: var(--surface-primary-border);
+      }
+
+      .pdf-option:hover {
+        background: rgba(0, 210, 255, 0.05);
+        color: #ffffff !important;
+        border-left-color: var(--accent) !important;
+        padding-left: 20px !important;
+      }
+
+      .pdf-option:active {
+        background: rgba(0, 210, 255, 0.1);
+      }
+
+      #file-display {
+        animation: emerge 0.4s ease-out;
+        font-weight: bold;
+      }
+      /* =============================================
+   ENGINE KEYFRAMES & PULSE EFFECTS
+   ============================================= */
+      .pulse-text {
+        color: var(--accent);
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .ready-pulse {
+        animation: discharge-glow 1.5s infinite ease-in-out;
+      }
+
+      @keyframes scan {
+        0% {
+          top: -10%;
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          top: 110%;
+          opacity: 0;
+        }
+      }
+
+      @keyframes pulse-border {
+        0%,
+        100% {
+          border-color: var(--surface-primary-border);
+          box-shadow: 0 0 20px rgba(0, 210, 255, 0.1);
+        }
+        50% {
+          border-color: var(--accent);
+          box-shadow: 0 0 40px var(--accent-glow);
+        }
+      }
+
+      @keyframes synapse-glow {
+        0%,
+        100% {
+          opacity: 0.4;
+          text-shadow: 0 0 5px rgba(0, 210, 255, 0);
+        }
+        50% {
+          opacity: 1;
+          text-shadow: 0 0 10px var(--accent-glow);
+        }
+      }
+
+      @keyframes discharge-glow {
+        0%,
+        100% {
+          transform: scale(1);
+          color: #ffffff;
+          text-shadow: 0 0 0px #00ff88;
+        }
+        50% {
+          transform: scale(1.3);
+          color: #00ff88;
+          text-shadow: 0 0 15px #00ff88;
+        }
+      }
+
+      @keyframes emerge {
+        from {
+          opacity: 0;
+          transform: translateY(-5px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* --- Inline Refactoring Map Hooks --- */
+      .mobile-nav-bar .menu-trigger {
+        cursor: pointer;
+      }
+      .menu-trigger {
+        cursor: pointer;
+      }
+      .mobile-nav-bar .logo-text {
+        text-align: center;
+      }
+      .mobile-nav-bar .logo-text h2 {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+      }
+      .mobile-nav-bar .nav-spacer {
+        width: 24px;
+      }
+
+      .logo-text.main-mode-trigger {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        margin-right: 30px;
+      }
+      .logo-text.main-mode-trigger h2 {
+        width: min-content;
+      }
+
+      .mastery-meter .meter-metadata {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.6rem;
+        font-weight: 800;
+        color: var(--text-muted);
+      }
+
+      #nav-pdf-trigger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #pdf-arrow {
+        font-size: 0.7rem;
+        transition:
+          transform 0.3s ease,
+          opacity 0.3s ease;
+        opacity: 0.5;
+      }
+
+      #pdf-submenu {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 0 0 8px 8px;
+        margin: 0 5px;
+      }
+
+      .pdf-option {
+        padding: 12px 15px;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        cursor: pointer;
+        border-left: 2px solid var(--surface-primary-border);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .pdf-option .pdf-index {
+        color: var(--accent);
+        opacity: 0.6;
+      }
+
+      /* --- Sidebar Mini Engine Layout --- */
+      .sidebar-mini {
+        display: none;
+      }
+      .mini-svg-override {
+        width: 25px;
+        height: 25px;
+        vertical-align: middle;
+        margin: 0 0 1px 0;
+        position: static;
+      }
+
+      /* --- Header Pipeline Flow Architecture --- */
+      .study-pipeline .pipeline-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+      }
+      .study-pipeline .pipeline-flow {
+        display: flex;
+        gap: 5px;
+      }
+      .study-pipeline .step-mastery {
+        margin-right: 1rem;
+      }
+
+      /* --- Synapse Overlay Modal Adjustments --- */
+      .central-synapse .focus-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .central-synapse .nav-arrow {
+        cursor: pointer;
+        padding: 5px;
+      }
+      .central-synapse #vault-index-count {
+        color: var(--accent);
+        margin: 0 10px;
+        font-family: monospace;
+      }
+      .central-synapse .close-synapse {
+        cursor: pointer;
+      }
+      .central-synapse #popup-def {
+        white-space: pre-wrap;
+        display: flex;
+        justify-content: center;
+        text-align: left;
+      }
+
+      /* --- Vault View Interactive Button Styling Hooks --- */
+      #view-display #view-title {
+        font-size: 2rem;
+        font-weight: 900;
+        margin: 0 0 25px 0;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+      #view-display #view-count-badge {
+        font-size: 1rem;
+        background: var(--accent-glow);
+        padding: 4px 12px;
+        border-radius: 20px;
+        color: var(--text-dim);
+        border: 1px solid var(--accent);
+      }
+
+      #view-display #vault-start-btn {
+        background: var(--accent-glow);
+        border: 1px solid var(--accent);
+        color: var(--text-dim);
+        padding: 8px 20px;
+        border-radius: 4px;
+        font-family: "Orbitron", monospace;
+        font-size: 0.75rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        outline: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      /* --- Hero & Informational Section Subcomponents --- */
+      .hero-container .top-meta {
+        margin-bottom: 1rem;
+      }
+      .hero-container .quick-terminal-links {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 8px;
+      }
+      .quick-terminal-links-h {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+      }
+      .hero-container .fascinating-pipeline {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .hero-container .node-anchor-modify {
+        border-color: var(--accent);
+      }
+      .hero-container .text-accented {
+        color: var(--accent);
+      }
+
+      /* --- Advanced Matrix Search Layout Module --- */
+      #view-search .search-header-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      #view-search h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        letter-spacing: -1.5px;
+        margin: 0;
+
+        /* Solid, theme-aware color */
+        color: var(--text-pure);
+
+        /* Added a subtle glow that shifts with the accent color */
+        text-shadow: 0 0 10px var(--accent-glow);
+
+        /* Smooth transition for theme switching */
+        transition:
+          color 0.3s ease,
+          text-shadow 0.3s ease;
+      }
+
+      .advanced-search-matrix {
+        /* Use Layer 1 for the main surface */
+        background: var(--surface-primary);
+
+        /* Use Layer 1 border token */
+        border: 1px solid var(--surface-primary-border);
+
+        padding: 24px;
+        border-radius: 12px;
+        backdrop-filter: blur(20px);
+        margin-bottom: 1.5rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .advanced-search-matrix .search-grid-inputs {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+      .advanced-search-matrix .search-input-field {
+        display: flex;
+        flex-direction: column;
+      }
+      .advanced-search-matrix .input-field-half {
+        flex: 1 1 300px;
+      }
+      .advanced-search-matrix .input-field-flex {
+        flex-grow: 1;
+      }
+
+      /* --- Core Interface Decorative Matrix Indicators --- */
+      .advanced-search-matrix .matrix-label {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        opacity: 0.8;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent);
+      }
+      .advanced-search-matrix .matrix-glow-dot {
+        width: 6px;
+        height: 6px;
+        background: var(--accent);
+        border-radius: 50%;
+        box-shadow: 0 0 8px var(--accent);
+      }
+      .advanced-search-matrix .matrix-glow-dot-static {
+        width: 6px;
+        height: 6px;
+        background: var(--accent);
+        border-radius: 50%;
+      }
+
+      /* --- Custom Interactive Input Blocks --- */
+      .file-upload-wrapper {
+        position: relative;
+        height: 54px;
+      }
+      .file-upload-wrapper input[type="file"] {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
+      }
+      .file-upload-wrapper .drag-drop-zone {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* Use Layer 2 for background to match interactive cards */
+        background: var(--surface-secondary);
+
+        /* Use Layer 2 border token, but keep it dashed for the "drop zone" effect */
+        border: 1px dashed var(--surface-secondary-border);
+
+        border-radius: 8px;
+        font-size: 0.75rem;
+        opacity: 0.5;
+        font-family: monospace;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+
+        /* Base color for the dashed line */
+        box-shadow: inset 0 0 10px var(--accent-glow);
+        border-color: var(--accent);
+      }
+
+      /* Enhancing the hover state to show intent */
+      .file-upload-wrapper:hover .drag-drop-zone {
+        opacity: 1;
+        background: var(--accent-glow);
+      }
+
+      /* --- Interactive Input Field --- */
+      .interactive-input-container input[type="text"] {
+        margin: 0;
+        /* Use Layer 2 for consistency with cards/surfaces */
+        background: var(--surface-secondary);
+        /* Use consistent borders */
+        border: 1px solid var(--surface-secondary-border);
+        color: var(--text-pure);
+        padding: 15px 20px;
+        font-size: 1rem;
+        border-radius: 8px;
+        width: 100%;
+        outline: none;
+        transition: all 0.3s ease;
+        font-family: inherit;
+      }
+
+      .interactive-input-container input[type="text"]:focus {
+        border-color: var(--accent);
+        /* Create a clean focus glow using your existing token */
+        box-shadow: 0 0 10px var(--accent-glow);
+      }
+      #clear-search {
+        position: absolute;
+        right: 40px;
+        top: 65px;
+        cursor: pointer;
+        color: var(--text-muted);
+        font-family: monospace;
+        font-weight: bold;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+        z-index: 3;
+        display: none;
+      }
+      #clear-search:hover {
+        opacity: 1;
+      }
+      .search-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      .clear-icon {
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        color: var(--accent);
+        font-weight: bold;
+        font-size: 1.2rem;
+        user-select: none;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .decorative-corner-bracket {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 12px;
+        height: 12px;
+        border-top: 2px solid var(--accent);
+        border-right: 2px solid var(--accent);
+        border-radius: 0 8px 0 0;
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      /* --- Embedded PDF Screen View Container --- */
+      #view-pdf {
+        height: calc(100% + 56px);
+        margin: -30px -30px;
+      }
+      #view-pdf #pdf-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* --- System Active States --- */
+      .system-active-state {
+        background: var(--accent) !important;
+        color: var(--text-dim) !important;
+        box-shadow: 0 0 20px var(--accent) !important;
+      }
+      /* --- Databank Vacuum Fallback Block Layout --- */
+      .databank-vacuum-bg {
+        text-align: center;
+        padding: 120px 20px;
+        border: 1px solid rgba(255, 255, 255, 0.03);
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.02) 0%,
+          transparent 70%
+        );
+        border-radius: 8px;
+      }
+
+      .databank-vacuum-bg .vacuum-glyph {
+        font-size: 3rem;
+        opacity: 0.1;
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      .databank-vacuum-bg .vacuum-title {
+        letter-spacing: 5px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.2);
+        font-family: "Orbitron", monospace;
+        margin: 0;
+      }
+
+      .databank-vacuum-bg .vacuum-status-text {
+        color: var(--accent);
+        font-size: 0.65rem;
+        opacity: 0.4;
+        margin-top: 15px;
+        font-family: monospace;
+        letter-spacing: 2px;
+      }
+
+      /* --- Active System Synchronized Scanners --- */
+      .idle-active-wrapper {
+        text-align: center;
+        padding: 100px 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .neural-scan-axis {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          var(--accent),
+          transparent
+        );
+        opacity: 0.6;
+      }
+
+      .interactive-panel-z {
+        position: relative;
+        z-index: 1;
+      }
+
+      .synchronized-header {
+        font-family: "Orbitron", monospace;
+        font-size: 1rem;
+        letter-spacing: 8px;
+        color: var(--accent);
+        margin-bottom: 30px;
+        text-shadow: 0 0 15px var(--accent);
+      }
+
+      .metrics-grid {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        font-family: monospace;
+      }
+
+      .metrics-grid .metric-node {
+        text-align: left;
+      }
+
+      .metrics-grid .metric-label {
+        display: block;
+        font-size: 0.6rem;
+        opacity: 1;
+        color: var(--text-muted);
+      }
+
+      .metrics-grid .metric-value {
+        font-size: 1.5rem;
+        color: var(--text-pure);
+        font-weight: bold;
+      }
+
+      .metrics-grid .metric-divider {
+        width: 1px;
+        background: var(--surface-secondary-border);
+      }
+
+      .standby-indicator-stack {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .standby-indicator-stack .pulse-ring {
+        width: 10px;
+        height: 10px;
+        background: var(--accent);
+        border-radius: 50%;
+        box-shadow: 0 0 15px var(--accent);
+        animation: pulse 2s infinite;
+      }
+
+      .standby-indicator-stack .standby-text {
+        font-size: 1rem;
+        font-family: monospace;
+        color: var(--accent);
+        opacity: 1.6;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+
+      /* --- Query Error Messages --- */
+      .search-error-fallback {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 80px 20px;
+        border: 1px dashed rgba(255, 68, 68, 0.2);
+        border-radius: 3px;
+        background: rgba(255, 0, 0, 0.02);
+      }
+
+      .search-error-fallback .error-msg-header {
+        color: #ff4444;
+        letter-spacing: 3px;
+        font-family: monospace;
+        font-size: 0.75rem;
+        font-weight: bold;
+      }
+
+      .search-error-fallback .error-msg-sub {
+        color: rgba(255, 68, 68, 0.5);
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        margin-top: 10px;
+      }
+
+      /* --- Dynamic Live Render Result Highlight Tokens --- */
+      .term-match-highlight {
+        color: var(--accent);
+        text-shadow: 0 0 10px var(--accent);
+      }
+
+      .def-match-highlight {
+        color: var(--accent);
+        background: rgba(0, 210, 255, 0.1);
+      }
+
+      .expand-icon {
+        font-size: 0.8rem;
+        color: var(--accent);
+        opacity: 0.7;
+      }
+
+      .collapsible-measure-wrapper {
+        min-height: 0;
+      }
+
+      .card-description-text {
+        color: var(--text-muted);
+        line-height: 1.6;
+        margin: 15px 0;
+        white-space: pre-wrap;
+      }
+
+      .btn-import-genesis {
+        margin-top: 15px;
+        background: transparent;
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        cursor: pointer;
+        padding: 5px 10px;
+        font-size: 0.7rem;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .btn-import-genesis:hover {
+        background: rgba(0, 210, 255, 0.1);
+      }
+
+      /* --- Content Editable Custom Control Interfaces --- */
+      .editable-field-active {
+        background: rgba(255, 255, 255, 0.05) !important;
+        outline: 1px dashed var(--accent);
+      }
+
+      .save-action-active {
+        color: var(--success) !important;
+      }
+
+      /* --- Submenu Dividers --- */
+      .submenu-separator-active {
+        border-top: 1px solid rgba(0, 210, 255, 0.1);
+      }
+
+      /* --- Central Standby Processing Engine Animation Loop --- */
+      @keyframes pulse {
+        0% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(0, 210, 255, 0.7);
+        }
+        70% {
+          transform: scale(1);
+          box-shadow: 0 0 0 10px rgba(0, 210, 255, 0);
+        }
+        100% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(0, 210, 255, 0);
+        }
+      }
+      /* Ensure search text doesn't overflow or crowd under the clear icon */
+      #global-search {
+        padding-right: 35px;
+      }
+      .audio-btn-wrapper {
+        display: inline-flex !important;
+        align-items: center;
+        white-space: nowrap;
+      }
+
+      .action-column {
+        display: flex;
+        flex-wrap: wrap; /* Allows wrapping only if the screen is too small */
+        align-items: center;
+        gap: 10px;
+      }
+
+      .path-edit-input {
+        max-width: 150px; /* Limits input width so they don't break the row */
+      }
+      #popup-term:hover,
+      #popup-def:hover {
+        color: #4a9eff; /* Or your preferred hover color */
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mobile-nav-bar">
+      <div class="menu-trigger" onclick="toggleSidebar()">&#9776;</div>
+      <div class="logo-text">
+        <h2>English! My Way.</h2>
+      </div>
+      <div class="nav-spacer"></div>
+    </div>
+
+    <div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+    <aside class="sidebar">
+      <div class="logo-container" title="View System Description">
+        <div class="menu-trigger" onclick="toggleSidebar()">&#9776;</div>
+
+        <div class="logo-text main-mode-trigger" onclick="switchMode('desc')">
+          <svg
+            class="nexus-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 2L4.5 20.29L5.21 21L12 18L18.79 21L19.5 20.29L12 2Z"
+              fill="url(#grad1)"
+            />
+            <circle
+              cx="12"
+              cy="12"
+              r="3"
+              stroke="rgba(255, 255, 255, 0.5)"
+              stroke-width="0.5"
+              fill="rgba(255, 255, 255, 0.1)"
+            />
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop
+                  offset="0%"
+                  style="stop-color: var(--accent); stop-opacity: 1"
+                />
+                <stop
+                  offset="100%"
+                  style="
+                    stop-color: var(--accent-2, var(--border));
+                    stop-opacity: 1;
+                  "
+                />
+              </linearGradient>
+            </defs>
+          </svg>
+          <h2>English! My Way.</h2>
+        </div>
+
+        <button
+          class="btn-nuclear small-screen"
+          onclick="nuclearReset()"
+          title="System Wipe"
+        >
+          &#9851;
+        </button>
+      </div>
+
+      <div class="mastery-meter">
+        <div class="meter-metadata">
+          <span>KNOWLEDGE DENSITY</span>
+          <span id="mastery-pct">0%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="mastery-fill"></div>
+        </div>
+      </div>
+
+      <div class="nav-group">
+        <span class="nav-label" onclick="toggleDiv('pathways-content')"
+          >Neural Pathways</span
+        >
+
+        <div id="pathways-content">
+          <div id="pathways-content">
+            <div class="nav-card" id="nav-new" onclick="switchMode('new')">
+              <span>◈ Primary</span>
+              <span class="count" id="count-new">0</span>
+            </div>
+            <div
+              class="nav-card"
+              id="nav-forgot"
+              onclick="switchMode('forgot')"
+            >
+              <span>⟳ Study</span>
+              <span class="count" id="count-forgot">0</span>
+            </div>
+            <div class="nav-card" id="nav-know" onclick="switchMode('know')">
+              <span>✦ Vault</span>
+              <span class="count" id="count-know">0</span>
+            </div>
+            <div
+              class="nav-card"
+              id="nav-search"
+              onclick="switchMode('search')"
+            >
+              <span>⌬ Global Search</span>
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+        <span class="nav-label" onclick="toggleDiv('vault-content')"
+          >Additional Features</span
+        >
+
+        <div id="vault-content">
+          <div class="nav-pdf-group">
+            <div
+              class="nav-card"
+              id="nav-pdf-trigger"
+              onclick="togglePdfSubmenu()"
+            >
+              <span>GRAMMAR ARCHIVE</span>
+              <span id="pdf-arrow">&#9660;</span>
+            </div>
+
+            <div id="pdf-submenu">
+              <div class="pdf-option" onclick="openPDF('./G/Forms.pdf')">
+                <span class="pdf-index">00</span>
+                <span>PHASE ZERO</span>
+              </div>
+              <div class="pdf-option" onclick="openPDF('./G/Grammar 1.pdf')">
+                <span class="pdf-index">01</span>
+                <span>PHASE ONE</span>
+              </div>
+              <div class="pdf-option" onclick="openPDF('./G/Grammar 2.pdf')">
+                <span class="pdf-index">02</span>
+                <span>PHASE TWO</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-card" id="nav-QNA" onclick="switchMode('QNA')">
+            <span>Questions and Answers</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-submit btn-submit1" onclick="switchMode('add')">
+        &#10010; NEW ANCHOR
+      </button>
+    </aside>
+    <aside class="sidebar-mini" id="sidebar-mini">
+      <div class="mini-header" onclick="toggleSidebar()">
+        <div class="menu-trigger">&#9776;</div>
+      </div>
+
+      <div class="mini-nav-group">
+        <div
+          class="mini-card"
+          onclick="switchMode('desc')"
+          title="View System Description"
+        >
+          <span class="mini-icon">
+            <svg
+              class="nexus-icon mini-svg-override"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2L4.5 20.29L5.21 21L12 18L18.79 21L19.5 20.29L12 2Z"
+                fill="url(#grad1_mini)"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="3"
+                stroke="rgba(255, 255, 255, 0.5)"
+                stroke-width="0.5"
+                fill="rgba(255, 255, 255, 0.1)"
+              />
+              <defs>
+                <linearGradient
+                  id="grad1_mini"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style="stop-color: var(--accent); stop-opacity: 1"
+                  />
+                  <stop
+                    offset="100%"
+                    style="
+                      stop-color: var(--accent-2, var(--border));
+                      stop-opacity: 1;
+                    "
+                  />
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="mini-label">System</span>
+        </div>
+
+        <div class="mini-card" onclick="switchMode('new')" title="Primary">
+          <span class="mini-icon">◈</span>
+          <span class="mini-label">Primary</span>
+        </div>
+
+        <div class="mini-card" onclick="switchMode('forgot')" title="Study">
+          <span class="mini-icon">⟳</span>
+          <span class="mini-label">Study</span>
+        </div>
+
+        <div class="mini-card" onclick="switchMode('know')" title="Vault">
+          <span class="mini-icon">✦</span>
+          <span class="mini-label">Vault</span>
+        </div>
+
+        <div
+          class="mini-card"
+          onclick="switchMode('search')"
+          title="Global Search"
+        >
+          <span class="mini-icon">⌬</span>
+          <span class="mini-label">Global Search</span>
+        </div>
+
+        <br />
+
+        <div
+          class="mini-card"
+          id="nav-pdf"
+          onclick="toggleSidebar()"
+          title="Grammar"
+        >
+          <span class="mini-icon">GA</span>
+          <span class="mini-label">GRAMMAR ARCHIVE</span>
+        </div>
+
+        <div class="mini-card" onclick="switchMode('QNA')" title="Q&A">
+          <span class="mini-icon">QA</span>
+          <span class="mini-label">Questions and Answers</span>
+        </div>
+
+        <br />
+
+        <div
+          class="mini-card mini-add"
+          onclick="switchMode('add')"
+          title="New Anchor"
+        >
+          <span class="mini-icon">&#10010;</span>
+          <span class="mini-label">Add</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="study-pipeline">
+        <div class="pipeline-group">
+          <div class="menu-trigger secondboy" onclick="toggleSidebar()">
+            &#9776;
+          </div>
+          <div class="pipeline-flow">
+            <div class="pipeline-step" id="file-display">Input</div>
+            <div class="arrow">&rarr;</div>
+            <div class="pipeline-step">Process</div>
+            <div class="arrow">&rarr;</div>
+            <div class="pipeline-step step-mastery">Mastery</div>
+          </div>
+          <div class="quick-terminal-links-h"></div>
+        </div>
+
+        <div class="header-actions">
+          <div class="search-wrapper" id="search-container">
+            <span class="search-icon">⌕</span>
+            <input
+              type="text"
+              id="global-search"
+              placeholder="Search terms..."
+              oninput="handleSearchInput()"
+            />
+            <span
+              id="clear-searchWEB_SIDE"
+              class="clear-icon"
+              onclick="clearSearchInput()"
+              style="display: none"
+              >×</span
+            >
+          </div>
+
+          <button
+            class="btn-nuclear"
+            onclick="nuclearReset()"
+            title="System Wipe"
+          >
+            🧽
+          </button>
+          <button
+            class="btn-nuclear"
+            onclick="toggleThemes(event)"
+            oncontextmenu="
+              toggleThemesForward(event);
+              return false;
+            "
+            title="Left-click: Previous | Right-click: Next"
+          >
+            🎨
+          </button>
+          <button
+            class="btn-nuclear"
+            onclick="importData()"
+            title="Import data"
+          >
+            📕
+          </button>
+          <button
+            class="btn-nuclear"
+            onclick="exportData()"
+            title="Export data"
+          >
+            🖨️
+          </button>
+        </div>
+      </header>
+
+      <div class="content-area">
+        <div id="focus-overlay"></div>
+
+        <div id="vault-popup" class="central-synapse">
+          <div class="synapse-content">
+            <div class="focus-header">
+              <div class="nav-controls">
+                <span class="nav-arrow" onclick="moveVault(-1)">&lt;</span>
+                <span id="vault-index-count">[ 0 / 0 ]</span>
+                <span class="nav-arrow" onclick="moveVault(1)">&gt;</span>
+              </div>
+              <span class="close-synapse" onclick="closeVault()">&times;</span>
+            </div>
+
+            <h4 id="popup-term"></h4>
+            <hr class="glow-line" />
+            <p id="popup-def"></p>
+          </div>
+        </div>
+
+        <div id="view-display" class="view">
+          <h1 id="view-title">
+            <span id="title-text">The Vault</span>
+            <span id="view-count-badge">0</span>
+
+            <button
+              id="vault-start-btn"
+              onclick="toggleVaultFeature()"
+              class="system-idle"
+            >
+              <span id="btn-status-icon">&nbsp;</span>
+              <span id="btn-text">Engage System</span>
+            </button>
+          </h1>
+
+          <div id="card-container"></div>
+        </div>
+
+        <div id="view-add" class="view">
+          <h1>Add New Anchor</h1>
+          <div class="mastery-form">
+            <input type="text" id="term" placeholder="Term (e.g., Mitosis)" />
+            <textarea
+              id="def"
+              rows="25"
+              placeholder="Memory Anchor..."
+            ></textarea>
+            <button class="btn-submit" onclick="save()">Save to Primary</button>
+          </div>
+        </div>
+
+        <div id="view-desc" class="view active">
+          <div class="neural-grid" style="display: block"></div>
+          <div class="ambient-glow"></div>
+
+          <div style="top: 50px" class="hero-container">
+            <div class="top-meta">
+              <span class="badge">COGNITIVE INTERFACE v3.2</span>
+              <div class="system-status">
+                <span class="status-dot"></span>SYSTEM_ACTIVE
+              </div>
+            </div>
+            <div class="quick-terminal-links">
+              <a href="https://gemini.google.com/" class="system-status"
+                >Gemini</a
+              >
+
+              <a href="https://www.cambly.com/en/student/" class="system-status"
+                >cambly</a
+              >
+              <a
+                href="https://www.imdb.com/search/title/?year=2026&title_type=feature"
+                class="system-status"
+                >Movies Searcher</a
+              >
+              <a href="https://vid.mycima.cc/404.php" class="system-status"
+                >Movies Projecter1</a
+              >
+              <a
+                href="https://shahie4u.co/download/%D9%81%D9%8A%D9%84%D9%85-spider"
+                class="system-status"
+                >Movies Projecter2</a
+              >
+              <a
+                href="https://9jarocks.net/videodownload/s"
+                class="system-status"
+                >Movies Downloader</a
+              >
+              <a href="https://thestreameast.top/" class="system-status"
+                >stream.east</a
+              >
+            </div>
+
+            <h1 class="glitch-title" data-text="English! My Way.">
+              English! My Way.
+            </h1>
+            <p class="subtitle">
+              Precision-engineered tools to streamline your path to English
+              fluency through structured, neural-aligned learning.
+            </p>
+
+            <div class="fascinating-pipeline">
+              <div
+                class="pipeline-node node-anchor-modify"
+                onclick="switchMode('add')"
+                data-info="Memory Entry"
+              >
+                <div class="node-icon">&#10010;</div>
+                <div class="node-label">ANCHOR</div>
+                <div class="node-status">APPEND</div>
+              </div>
+              <div class="neural-connector"><div class="pulse-line"></div></div>
+
+              <div
+                class="pipeline-node"
+                onclick="switchMode('new')"
+                data-info="Primary"
+              >
+                <div class="node-icon">◈</div>
+                <div class="node-label">PRIMARY</div>
+                <div class="node-status text-accented">READY</div>
+              </div>
+              <div class="neural-connector"><div class="pulse-line"></div></div>
+
+              <div
+                class="pipeline-node active"
+                onclick="switchMode('know')"
+                data-info="The Vault"
+              >
+                <div class="node-icon">✦</div>
+                <div class="node-label">VAULT</div>
+                <div class="node-status">SECURED</div>
+                <div class="scanning-ring"></div>
+              </div>
+              <div class="neural-connector"><div class="pulse-line"></div></div>
+
+              <div
+                class="pipeline-node"
+                onclick="switchMode('forgot')"
+                data-info="Neural Pathways"
+              >
+                <div class="node-icon">⟳</div>
+                <div class="node-label">STUDY</div>
+                <div class="node-status">SCANNING</div>
+              </div>
+              <div class="neural-connector"><div class="pulse-line"></div></div>
+
+              <div
+                class="pipeline-node"
+                onclick="switchMode('search')"
+                data-info="Archive Scan"
+              >
+                <div class="node-icon">⌬</div>
+                <div class="node-label">SEARCH</div>
+                <div class="node-status">INDEXED</div>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <button class="action-btn primary" onclick="importData()">
+                INITIALIZE PRIMARY
+              </button>
+              <button class="action-btn" onclick="exportData()">
+                DATA EXPORT
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="view-search" class="view">
+          <div class="search-header-flex">
+            <h1>Archive Search</h1>
+          </div>
+
+          <div class="mastery-form advanced-search-matrix">
+            <div class="search-grid-inputs">
+              <div class="search-input-field input-field-half">
+                <label class="matrix-label">
+                  <span class="matrix-glow-dot"></span> 01 // Source Archive
+                </label>
+
+                <div class="file-upload-wrapper">
+                  <input
+                    type="file"
+                    id="file-selector"
+                    multiple
+                    accept=".json"
+                  />
+                  <div class="drag-drop-zone">DROP JSON OR CLICK</div>
+                </div>
+              </div>
+
+              <div class="search-input-field input-field-flex">
+                <label class="matrix-label">
+                  <span class="matrix-glow-dot-static"></span> 02 // Execute
+                  Query
+                </label>
+
+                <div class="interactive-input-container">
+                  <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Scan neural fragments..."
+                    oninput="executeSearch()"
+                  />
+                  <div id="clear-search" onclick="clearDatabanks()">X</div>
+                  <div class="decorative-corner-bracket"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="search-results-container"></div>
+        </div>
+
+        <div id="view-pdf" class="view">
+          <div id="pdf-container"></div>
+        </div>
+      </div>
+    </main>
+      
+    <script>
+      const data = [
+        `I’m Ziyad Mohamed. I’m a 22-year-old I've just graduated with a Bachelor’s degree in Law from Helwan University,
+studying law gave me a really sharp eye for detail and taught me how to stay calm and analytical when resolving complex issues.
+skills I find myself using every single day in customer service.
+
+In terms of experience, I worked as a Customer Service Representative in a restaurant call center for a year.
+
+I handled inbound calls for reservations, inquiries, and complaints, assisted customers with menu details and order customization, and coordinated with staff. 
+
+This experience helped me strengthen my communication skills and ability to work effectively under pressure.`,
+        `One of the movies that has inspired me the most is The Pursuit of Happyness. I admire it because it powerfully portrays resilience, determination, and the importance of never giving up in the face of extreme adversity. The main character goes through severe financial hardship and personal struggles, yet he continues striving for a better future for himself and his son. What stands out to me the most is his resilience and his ability to keep believing in himself despite constant failures. What makes this story so impactful for me is the message that perseverance and self-belief can eventually lead to success, even when circumstances seem overwhelming. Whenever I face challenges in my own life, this film reminds me to stay determined and keep moving forward. At the end of the day, the movie shows that persistence and hard work are often rewarded`,
+
+        `I’m interested in working as a call center agent because it allows me to interact daily with different types of customers, including native and non-native English speakers. This environment will help me enhance my communication skills and reach a higher level of fluency. In addition, gaining professional customer service experience will strengthen my CV and open doors to more career opportunities in multinational companies.`,
+
+        `You should hire me because I have a solid B2 level in English, which enables me to communicate effectively with customers. In addition, I’m patient, adaptable, and I enjoy solving problems. I can handle different types of customers calmly and professionally, and I’m always focused on providing a positive customer experience.`,
+
+        `If a customer is angry, I would first remain calm and professional. I would actively listen without interrupting and acknowledge their frustration to show empathy. Once they feel heard, I would clarify the issue, explain the available solutions, and work efficiently to resolve the problem. My goal would be to turn a negative experience into a positive one while maintaining company policy.`,
+
+        `If I don’t know the answer to a customer’s question, I would remain confident and transparent. I would politely inform the customer that I need to verify the information to ensure accuracy. Then, I would quickly consult my supervisor or use available resources to find the correct solution. After that, I would follow up with the customer promptly. I also see situations like this as learning opportunities to improve my knowledge for the future.`,
+
+        `I perform well under pressure because I stay calm, focused, and solution-oriented. In high-volume situations, I prioritize tasks and manage my time effectively to maintain performance and quality. I also understand the importance of teamwork, so if necessary, I communicate with my supervisor for guidance. Even under pressure, my goal is to ensure every customer receives professional and efficient service.`,
+
+        `One of my weaknesses is that I tend to set very high standards for myself. When I commit to something, I invest a lot of effort and sometimes become overly self-critical if the results are not immediate. However, I’ve learned to view challenges as opportunities for growth, and I now focus more on continuous improvement rather than perfection.`,
+
+        `In the next three years, I see myself becoming a highly skilled customer service professional with advanced communication abilities. I plan to improve my English to a C1 or C2 level and potentially learn another language like German or French, which would add more value to CV, possibly moving into a senior agent or team leader role while continuously developing my professional skills.`,
+
+        `What differentiates me from other candidates is my combination of technical and communication skills. My background in web development allows me to adapt quickly to new systems and software platforms, which is essential in a call center environment. I’m also a fast learner, an active listener, and able to manage conversations while taking accurate notes. Furthermore, my academic background in law has strengthened my analytical thinking and ability to handle situations professionally.  .`,
+
+        `One challenging situation I faced was handling an upset customer who called to complain about a delayed reservation and incorrect order details. The customer was frustrated and speaking quickly, which made the situation more intense.
+
+                  I stayed calm and listened carefully without interrupting, showing empathy and understanding. I apologized for the inconvenience and reassured the customer that I would resolve the issue. I quickly checked the booking system, identified the mistake, and coordinated with the restaurant staff to prioritize their reservation and correct the order.
+
+                  In the end, the issue was resolved smoothly, and the customer appreciated the quick response and professional handling. This experience taught me the importance of staying calm under pressure, active listening, and taking fast, effective action to ensure customer satisfaction.`,
+
+        `If a customer is shouting or blaming me unfairly, I would remain calm and professional. I would actively listen without interrupting and acknowledge their frustration, even if the issue is not my responsibility. I understand that customers are often reacting to the situation, not the person. After clarifying the problem, I would focus on offering the best possible solution. My goal would be to de-escalate the situation and ensure the customer feels heard and supported.`,
+
+        `If I receive negative feedback from my supervisor, I see it as an opportunity for growth. I would listen carefully and seek clarification to fully understand the areas that need improvement. I would take responsibility for my performance and create a clear action plan to improve. I believe constructive feedback is essential for professional development, and I always aim to learn from it and perform better in the future.`,
+
+        `In my previous software development role, I worked within a cross-functional team that included back-end developers, a UI/UX designer, and a team leader. As a front-end developer, my responsibility was to translate design concepts into functional interfaces while coordinating closely with the back-end team to ensure system integration. I maintained clear communication, met deadlines, and contributed to problem-solving discussions. This experience strengthened my teamwork, communication, and collaboration skills—qualities that are equally important in a call center environment.`,
+
+        `If I had a disagreement with my team leader, I would handle it professionally and respectfully. I would express my perspective clearly and provide logical reasoning for my suggestion. At the same time, I understand that leadership involves broader responsibility and experience. If the final decision differs from my opinion, I would fully support it and ensure the team’s objectives are achieved. I believe constructive discussions strengthen teamwork rather than weaken it.`,
+
+        `If a customer tells me they can’t pay their bill, I would first show empathy and acknowledge their situation. I would ask questions to better understand their circumstances. Then, I would inform them about any available payment plans, extensions, or alternative solutions according to company policy. My goal would be to support the customer while protecting the company’s interests.`,
+
+        `When handling multiple calls, I remain calm and organized. I prioritize tasks based on urgency while ensuring each customer receives full attention during their interaction. I focus on efficiency without compromising service quality. If the workload becomes overwhelming, I communicate with my supervisor to maintain performance standards. My goal is to manage pressure effectively while delivering consistent and professional service.`,
+        ` I successfully completed my contract in my previous software development role. After that, I reflected on my career goals and decided to pursue an opportunity that would allow me to strengthen my communication and customer interaction skills. I believe that working in a call center environment will help me grow professionally while contributing effectively to the company`,
+
+        `A typical day in my role as a Customer Service Representative started with checking the booking system and reviewing any updates or special reservations.
+
+                  Throughout the day, I handled inbound calls from customers for reservations, inquiries, and complaints. I assisted them with menu details, order customization, and availability, making sure to provide clear and accurate information.
+
+                  I also updated reservations in the system and coordinated with the restaurant staff to confirm bookings and ensure everything ran smoothly. When issues came up, I focused on resolving them quickly and professionally while keeping a calm and polite tone.
+
+                  Overall, my goal each day was to deliver excellent customer service and ensure a positive experience for every customer.
+                  `,
+
+        `If I got 1,000,000, I would divide it wisely instead of spending it all at once. First, I would invest a good portion of it in something stable, like real estate or a business, so it can grow over time and give me long-term financial security.
+
+                  Then, I would use part of the money to improve my skills and education, especially in my field, because I believe investing in myself gives the best return.
+
+                  I would also support my family and make sure they are comfortable. And of course, I’d keep a small portion to enjoy life a bit—traveling or doing things I love—but in a balanced way.
+
+                  Overall, my goal would be to turn that money into something sustainable, not just spend it quickly.`,
+      ];
+      const titles = [
+        "Tell me about yourself",
+        "movie",
+        "Why call center?",
+        "Why hire you?",
+        "Angry customer?",
+        "Don't know answer?",
+        "Under pressure",
+        "Greatest weakness",
+        "In 3 years",
+        "What makes you different",
+        "Challenging situation",
+        "Unfair blame",
+        "Negative feedback",
+        "Teamwork experience",
+        "disagreement with my team leader",
+        "Customer can't pay bill",
+        "Handling multiple calls",
+        "living your last work",
+        "A typical day",
+
+        "1,000,000",
+      ];
+      const qaData = titles.map((title, index) => ({
+        title: title,
+        answer: data[index],
+      }));
+
+      let allData = [];
+      let db = [];
+      let currentMode = "desc";
+      let currentVaultItem = null;
+      let fileImported = null;
+
+      // Centralized state // The single "source of truth" to stop any active audio
+      let currentAudio = null;
+      function stopAudio() {
+        if (currentAudio) {
+          currentAudio.pause();
+          currentAudio.currentTime = 0;
+          currentAudio = null;
+        }
+      }
+
+      // --- GLOBAL STATE ---
+      let vaultIndex = 0;
+      let vaultTimer;
+      let isVaultReminderActive = false; // Always start as FALSE (OFF)
+      function updateVaultUI(active) {
+        const btn = document.getElementById("vault-start-btn");
+        const btnStatusIcon = document.getElementById("btn-status-icon");
+        const btnText = document.getElementById("btn-text");
+
+        if (!btn) return;
+
+        if (active) {
+          // ACTIVE STYLE
+          btn.style.background = "var(--accent)";
+          btn.style.color = "var(--bg-canvas)";
+          btn.style.boxShadow = "0 0 20px var(--accent-glow)";
+
+          if (btnStatusIcon) btnStatusIcon.innerText = "●";
+          if (btnText) btnText.innerText = "System Active";
+        } else {
+          // IDLE STYLE
+          // Use --accent-glow or --surface-secondary to remain theme-consistent
+          btn.style.background = "var(--surface-secondary)";
+          btn.style.color = "var(--accent)";
+          btn.style.boxShadow = "none";
+
+          if (btnStatusIcon) btnStatusIcon.innerText = "○";
+          if (btnText) btnText.innerText = "Engage System";
+        }
+      }
+      function toggleVaultFeature() {
+        stopAudio();
+        isVaultReminderActive = !isVaultReminderActive;
+        localStorage.setItem(
+          "vault_reminder_enabled",
+          isVaultReminderActive.toString(),
+        );
+
+        updateVaultUI(isVaultReminderActive);
+
+        if (isVaultReminderActive) {
+          clearTimeout(vaultTimer);
+          vaultTimer = setTimeout(showVaultReminder, 1000);
+        } else {
+          // If turning off via button, use the standard close
+          closeVault();
+        }
+      } // Ensure the page always loads with the system OFF
+      window.addEventListener("DOMContentLoaded", () => {
+        isVaultReminderActive = false; // Force OFF state on refresh
+        updateVaultUI(false);
+        showIdleState();
+      });
+      function closeVault() {
+        stopAudio(); // Stop any playing audio
+        const el = document.getElementById("vault-popup");
+        const overlay = document.getElementById("focus-overlay");
+
+        // 1. Hide the popup and overlay
+        if (el) el.classList.remove("show");
+        if (overlay) overlay.classList.remove("active");
+
+        // 2. Kill all pending timers
+        clearTimeout(vaultTimer);
+
+        // 3. SHUT DOWN the system completely
+        isVaultReminderActive = false;
+        localStorage.setItem("vault_reminder_enabled", "false");
+
+        // 4. Update the button to show "Engage System" (Idle State)
+        updateVaultUI(false);
+
+        console.log("System: TERMINATED via Close Button");
+      }
+      function showVaultReminder() {
+        if (!isVaultReminderActive) return;
+
+        const mode = typeof currentMode !== "undefined" ? currentMode : "new";
+        const vaultItems = db.filter((i) => i.status === mode);
+
+        if (vaultItems.length === 0) {
+          vaultTimer = setTimeout(showVaultReminder, 3000);
+          return;
+        }
+
+        if (vaultIndex >= vaultItems.length) vaultIndex = 0;
+        currentVaultItem = vaultItems[vaultIndex];
+        const el = document.getElementById("vault-popup");
+
+        if (el) {
+          const termEl = document.getElementById("popup-term");
+          const defEl = document.getElementById("popup-def");
+
+          // 1. Set text contents
+          termEl.innerText = currentVaultItem.term;
+          defEl.innerText = currentVaultItem.def;
+
+          // 2. Make them look clickable (changes mouse cursor to a hand)
+          termEl.style.cursor = "pointer";
+          defEl.style.cursor = "pointer";
+
+          // 3. Attach click handlers directly using the item paths
+          termEl.onclick = () => playSpecificAudio(currentVaultItem.term_path);
+          defEl.onclick = () => playSpecificAudio(currentVaultItem.def_path);
+          // Add this helper function to your code
+          function playSpecificAudio(path) {
+            stopAudio(); // Always kill the previous instance
+            currentAudio = new Audio(path);
+            currentAudio
+              .play()
+              .catch((e) => console.error("Playback failed:", e));
+            currentAudio.onended = () => {
+              currentAudio = null;
+            };
+          }
+
+          // Inject the audio buttons using your existing helper (Keep this if you still want the buttons)
+          const audioControls = document.getElementById("popup-audio-controls");
+          if (audioControls) {
+            audioControls.innerHTML = `
+        ${getAudioBtn("Term", currentVaultItem.term_path || "", currentVaultItem.id, "term")}
+        ${getAudioBtn("Def", currentVaultItem.def_path || "", currentVaultItem.id, "def")}
+      `;
+          }
+
+          document.getElementById("vault-index-count").innerText =
+            `[ ${vaultIndex + 1} / ${vaultItems.length} ]`;
+          document.getElementById("focus-overlay").classList.add("active");
+          el.classList.add("show");
+          vaultIndex++;
+        }
+      }
+      function moveVault(direction) {
+        // FIX: Again, filter by mode to ensure arrows stay in the same group
+        const mode = typeof currentMode !== "undefined" ? currentMode : "new";
+        const vaultItems = db.filter((i) => i.status === mode);
+        stopAudio(); // <--- CRITICAL
+
+        if (vaultItems.length === 0) return;
+
+        let currentIndex = vaultIndex - 1;
+        let newIndex = currentIndex + direction;
+
+        if (newIndex >= vaultItems.length) newIndex = 0;
+        if (newIndex < 0) newIndex = vaultItems.length - 1;
+
+        vaultIndex = newIndex;
+        showVaultReminder();
+      }
+      function updateButtonStyle(isActive) {
+        const btn = document.getElementById("vault-start-btn");
+        const btnStatusIcon = document.getElementById("btn-status-icon");
+        const btnText = document.getElementById("btn-text");
+
+        if (isActive) {
+          btn.className = "system-active-state";
+          if (btnStatusIcon) btnStatusIcon.innerText = "●";
+          if (btnText) btnText.innerText = "System Active";
+        } else {
+          btn.className = "system-idle";
+          if (btnStatusIcon) btnStatusIcon.innerText = "○";
+          if (btnText) btnText.innerText = "Engage System";
+        }
+      }
+      document
+        .getElementById("file-selector")
+        .addEventListener("change", async function (event) {
+          const files = Array.from(event.target.files);
+          if (files.length === 0) return;
+
+          const loadPromises = files.map((file) => {
+            return new Promise((resolve) => {
+              const reader = new FileReader();
+              reader.onload = (e) => {
+                try {
+                  const json = JSON.parse(e.target.result);
+                  const data = Array.isArray(json) ? json : [json];
+                  resolve(data);
+                } catch (err) {
+                  console.error(`Corrupt fragment: ${file.name}`);
+                  resolve([]);
+                }
+              };
+              reader.readAsText(file);
+            });
+          });
+
+          const results = await Promise.all(loadPromises);
+          allData = results.flat();
+
+          // 1. Force the UI to show the 'Synchronized' state immediately
+          showIdleState();
+
+          // 2. Focus the search input for seamless user transition
+          const searchInput = document.getElementById("search-input");
+          if (searchInput) {
+            searchInput.focus();
+          }
+        });
+      // document
+      //   .getElementById("file-selector")
+      //   .addEventListener("change", async function (event) {
+      //     const files = Array.from(event.target.files);
+
+      //     const loadPromises = files.map((file) => {
+      //       return new Promise((resolve) => {
+      //         const reader = new FileReader();
+      //         reader.onload = (e) => {
+      //           try {
+      //             const json = JSON.parse(e.target.result);
+      //             const data = Array.isArray(json) ? json : [json];
+      //             resolve(data);
+      //           } catch (err) {
+      //             console.error(`Corrupt fragment: ${file.name}`);
+      //             resolve([]);
+      //           }
+      //         };
+      //         reader.readAsText(file);
+      //       });
+      //     });
+
+      //     const results = await Promise.all(loadPromises);
+      //     allData = results.flat(); // Flattens all arrays into one
+      //     executeSearch();
+      //   });
+      function clearDatabanks() {
+        // 1. Wipe the data memory
+        stopAudio();
+        allData = [];
+
+        // 2. Reset the input field
+        const input = document.getElementById("search-input");
+        input.value = "";
+
+        // 3. Clear the file selector (so you can re-upload the same file if needed)
+        document.getElementById("file-selector").value = "";
+
+        // 4. Hide the X button
+        document.getElementById("clear-search").style.display = "none";
+
+        // 5. Trigger the idle state UI
+        showIdleState();
+
+        console.log("System Purged: All local fragments cleared.");
+      }
+      function showIdleState() {
+        const container = document.getElementById("search-results-container");
+        if (!container) return;
+
+        if (allData.length === 0) {
+          // EMPTY STATE: Dramatic "Awaiting Signal" look
+          container.innerHTML = `
+                        <div class="idle-ghost-wrapper databank-vacuum-bg">
+                          <div class="glitch-box">
+                             <span class="vacuum-glyph">⌬</span>
+                             <p class="vacuum-title">DATABANK_VACUUM</p>
+                          </div>
+                          <p class="vacuum-status-text">[ STATUS: AWAITING_JSON_FRAGMENT_INJECTION ]</p>
+                        </div>`;
+        } else {
+          // READY STATE: Cybernetic "Neural Scan" look
+          container.innerHTML = `
+                        <div class="idle-active-wrapper">
+                          <div class="neural-scan-axis"></div>
+                          <div class="interactive-panel-z">
+                            <h2 class="synchronized-header">SYSTEM_SYNCHRONIZED</h2>
+
+                            <div class="metrics-grid">
+                              <div class="metric-node">
+                                <span class="metric-label">INDEXED_NODES</span>
+                                <span class="metric-value">${allData.length.toString().padStart(3, "0")}</span>
+                              </div>
+                              <div class="metric-divider"></div>
+                              <div class="metric-node">
+                                <span class="metric-label">NEURAL_LOAD</span>
+                                <span class="metric-value">${(allData.length * 0.12).toFixed(2)}kb</span>
+                              </div>
+                            </div>
+
+                            <div class="standby-indicator-stack">
+                               <div class="pulse-ring"></div>
+                               <p class="standby-text">Standby for query input...</p>
+                            </div>
+                          </div>
+                        </div>`;
+        }
+      }
+      function executeSearch() {
+        const queryInput = document.getElementById("search-input");
+        const clearBtn = document.getElementById("clear-search");
+        const resultsContainer = document.getElementById(
+          "search-results-container",
+        );
+
+        if (!queryInput || !resultsContainer) return;
+
+        const query = queryInput.value.toLowerCase();
+
+        // 1. Toggle the X button visibility
+        // Show X if there is text in the input OR if data is loaded
+        clearBtn.style.display = query || allData.length > 0 ? "block" : "none";
+
+        // 2. If no query or no data, show idle state
+        if (!query || allData.length === 0) {
+          showIdleState();
+          return;
+        }
+
+        // 3. Filter the databanks
+        const filtered = allData.filter(
+          (item) =>
+            (item.term && item.term.toLowerCase().includes(query)) ||
+            (item.def && item.def.toLowerCase().includes(query)),
+        );
+
+        // 4. Handle No Matches
+        if (filtered.length === 0) {
+          resultsContainer.innerHTML = `
+                      <div class="search-error-fallback">
+                        <p class="error-msg-header">✖ ERROR: NO_MATCHES_IN_LOADED_ARCHIVES</p>
+                        <p class="error-msg-sub">Fragment "${query}" does not exist in local databanks.</p>
+                      </div>`;
+          return;
+        }
+
+        // 5. Render cards (Fixed highlightedTerm reference)
+        // === Dynamic Highlight Card List Rendering ===
+        resultsContainer.innerHTML = filtered
+          .map((item) => {
+            const regex = new RegExp(`(${query})`, "gi");
+
+            // Highlight matches safely using CSS class mappings
+            const highlightedTerm = item.term.replace(
+              regex,
+              `<span class="term-match-highlight">$1</span>`,
+            );
+            const highlightedDef = item.def.replace(
+              regex,
+              `<span class="def-match-highlight">$1</span>`,
+            );
+
+            return `
+                        <div class="card-item" id="search-card-${item.id || Math.random()}">
+                          <div class="card-header" onclick="toggle(this)">
+                            <h3 class="termTitle">${highlightedTerm}</h3>
+                            <span class="expand-icon">▽</span>
+                          </div>
+                          <div class="card-content">
+                            <div class="collapsible-measure-wrapper">
+                              <p class="card-description-text">${highlightedDef}</p>
+                              <button class="btn-import-genesis" onclick='copyToCurrentSession(${JSON.stringify(item).replace(/'/g, "&apos;")})'>
+                                IMPORT TO PRIMARY
+                              </button>
+                            </div>
+                          </div>
+                        </div>`;
+          })
+          .join("");
+      }
+      function copyToCurrentSession(item) {
+        console.log(item);
+
+        // Create a new ID to avoid conflicts with existing items
+        const newItem = {
+          ...item,
+
+          status: "new",
+          id: Date.now() + Math.floor(Math.random() * 1000),
+        };
+
+        db.push(newItem);
+        alert(
+          `"${newItem.term}" has been cloned to your active Primary sector.`,
+        );
+
+        // Optional: Switch to view the new item
+        switchMode(newItem.status || "new");
+      }
+
+      // Theme Rotation Array
+      const themes = [
+        "default",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+      ];
+      function applyTheme(themeName) {
+        const root = document.documentElement;
+
+        // Structural update
+        if (themeName === "default") {
+          root.removeAttribute("data-theme");
+        } else {
+          root.setAttribute("data-theme", themeName);
+        }
+
+        // Save to local storage
+        localStorage.setItem("system-theme-matrix", themeName);
+      }
+      function toggleThemes(event) {
+        const btn = document.querySelector(".btn-nuclear");
+        btn.classList.add("pulse");
+
+        const root = document.documentElement;
+        const currentTheme = root.getAttribute("data-theme") || "default";
+
+        const currentIndex = themes.indexOf(currentTheme);
+        const nextIndex = (currentIndex - 1 + themes.length) % themes.length;
+
+        applyTheme(themes[nextIndex]);
+
+        setTimeout(() => btn.classList.remove("pulse"), 300);
+      }
+      function toggleThemesForward(event) {
+        event.preventDefault();
+
+        const root = document.documentElement;
+        const currentTheme = root.getAttribute("data-theme") || "default";
+
+        const currentIndex = themes.indexOf(currentTheme);
+        const nextIndex = (currentIndex + 1) % themes.length;
+
+        applyTheme(themes[nextIndex]);
+      }
+
+      // RESTORING from local storage on page load
+      document.addEventListener("DOMContentLoaded", () => {
+        const savedTheme = localStorage.getItem("system-theme-matrix");
+        if (savedTheme && savedTheme !== "default") {
+          document.documentElement.setAttribute("data-theme", savedTheme);
+        }
+      });
+      function nuclearReset() {
+        const firstCheck = confirm(
+          "⚠ WARNING: This will clear all data in your current session. Proceed?",
+        );
+
+        if (firstCheck) {
+          const secondCheck = confirm(
+            "Are you absolutely sure? Memory will be wiped.",
+          );
+
+          if (secondCheck) {
+            stopAudio();
+            // REMOVED: localStorage.removeItem calls
+            db = []; // Simply reset the variable in RAM
+
+            // Visual feedback before reload
+            document.body.style.opacity = "0.5";
+            document.body.style.filter = "grayscale(1)";
+
+            setTimeout(() => {
+              window.location.reload();
+            }, 500);
+          }
+        }
+      }
+      function openPDF(pdfUrl) {
+        const container = document.getElementById("pdf-container");
+        container.innerHTML = `<iframe src="${pdfUrl}" width="100%" height="100%" style="border:none;"></iframe>`;
+        switchMode("pdf");
+      }
+      function switchMode(mode) {
+        currentMode = mode;
+        vaultIndex = 0;
+        stopAudio();
+
+        // --- 1. Background Aesthetics Control ---
+        const grid = document.querySelector(".neural-grid");
+        const glow = document.querySelector(".ambient-glow");
+        if (grid) grid.style.display = mode === "desc" ? "block" : "none";
+        if (glow) glow.style.display = mode === "desc" ? "block" : "none";
+
+        // --- 2. Search Bar Visibility ---
+        const searchBar = document.getElementById("search-container");
+        if (searchBar) {
+          searchBar.style.display =
+            mode === "add" ||
+            mode === "desc" ||
+            mode === "search" ||
+            mode === "pdf"
+              ? "none"
+              : "block";
+        }
+
+        // --- 3. Archive Search Maintenance ---
+        if (mode !== "search") {
+          const sInput = document.getElementById("search-input");
+          const sResults = document.getElementById("search-results-container");
+          if (sInput) sInput.value = "";
+          if (sResults) sResults.innerHTML = "";
+        }
+
+        // --- 4. Toggle View Visibility (Using the Logic we discussed) ---
+        const viewMap = {
+          add: "view-add",
+          desc: "view-desc",
+          search: "view-search",
+          pdf: "view-pdf",
+        };
+
+        const targetViewId = viewMap[mode] || "view-display";
+
+        // Use a helper function or direct logic to handle the visibility transition
+        document
+          .querySelectorAll(".view")
+          .forEach((v) => v.classList.remove("active"));
+        const viewEl = document.getElementById(targetViewId);
+        if (viewEl) {
+          viewEl.classList.add("active");
+          // --- NEW: Add focus logic for the "Add New Anchor" view ---
+          if (targetViewId === "view-add") {
+            setTimeout(() => {
+              const termInput = document.getElementById("term");
+              if (termInput) {
+                termInput.focus();
+              }
+            }, 50);
+          }
+          // Check if we are entering 'view-search' and have files loaded
+          if (targetViewId === "view-search") {
+            showIdleState(); // <--- THIS WILL RENDER THE SYNCHRONIZED UI
+
+            const fileSelector = document.getElementById("file-selector");
+            const searchInput = document.getElementById("search-input");
+
+            if (fileSelector?.files?.length > 0 && searchInput) {
+              setTimeout(() => {
+                searchInput.focus();
+                searchInput.select();
+              }, 50);
+            }
+          }
+        }
+
+        // --- 5. Update Sidebar & Mini Sidebar Highlights ---
+        // (Keep your existing highlighting logic here)
+        document
+          .querySelectorAll(".nav-card, .mini-card")
+          .forEach((el) => el.classList.remove("active"));
+        const navId = {
+          new: "nav-new",
+          forgot: "nav-forgot",
+          know: "nav-know",
+          QNA: "nav-QNA",
+          search: "nav-search",
+          pdf: "nav-pdf",
+        }[mode];
+        const navEl = document.getElementById(navId);
+        if (navEl) navEl.classList.add("active");
+        document.querySelectorAll(".mini-card").forEach((card) => {
+          if (card.getAttribute("onclick")?.includes(`'${mode}'`))
+            card.classList.add("active");
+        });
+
+        // --- 6. Final UI Update ---
+        render();
+      }
+      function toggleDiv(id) {
+        const el = document.getElementById(id);
+        if (el) {
+          el.style.display = el.style.display === "none" ? "block" : "none";
+        }
+      }
+
+      function move(id, newStatus) {
+        // 1. Kill any active audio immediately upon interaction
+        stopAudio();
+
+        // 2. Perform the data shift
+        const index = db.findIndex((item) => item.id === id);
+        if (index !== -1) {
+          db[index].status = newStatus;
+        }
+
+        // 3. Refresh the UI
+        render();
+
+        // 4. If the system is currently "Active" (in the vault),
+        // ensure the UI reflects the change in the vault sequence
+        if (isVaultReminderActive) {
+          // Re-trigger the vault to ensure the current item is valid
+          // or to show the next logical item
+          clearTimeout(vaultTimer);
+          vaultTimer = setTimeout(showVaultReminder, 500);
+        }
+      }
+
+      function deleteItem(id) {
+        stopAudio(); // <--- CRITICAL
+        if (!confirm("Remove from current session?")) return;
+        stopAudio();
+        db = db.filter((i) => i.id !== id);
+        render();
+      }
+      function save() {
+        const t = document.getElementById("term").value.trim();
+        const d = document.getElementById("def").value.trim();
+
+        // Ensure we have data and know which file is active
+        if (!t || !d || !fileImported) {
+          alert("Please import a file first.");
+          return;
+        }
+
+        // Extract folder name: Removes extension, splits by slashes, gets last part
+        const folderName = fileImported.name
+          .replace(".json", "")
+          .split("/")
+          .pop();
+        // Extract all digits from the string
+        const numberMatch = folderName.match(/\d+/);
+        const nexusNumber = numberMatch ? numberMatch[0] : null;
+
+        // Push to local array
+        db.push({
+          id: Date.now(),
+          term: t,
+          def: d,
+          status: "new",
+          // Use the length or a unique ID based on your preference
+          term_path: `V/Audio/${nexusNumber}/term${db.length + 1}.mp3`,
+          def_path: `V/Audio/${nexusNumber}/def${db.length + 1}.mp3`,
+        });
+
+        document.getElementById("term").value = "";
+        document.getElementById("def").value = "";
+
+        // Ensure your render/switchMode functions follow here
+        render();
+        switchMode("new");
+      }
+      function render() {
+        const container = document.getElementById("card-container");
+        const searchInput = document.getElementById("global-search");
+        const searchQuery = searchInput ? searchInput.value.toLowerCase() : "";
+        const vaultBtn = document.getElementById("vault-start-btn");
+
+        if (typeof updateStats === "function") updateStats();
+
+        const mode = typeof currentMode !== "undefined" ? currentMode : "desc";
+        const data = typeof db !== "undefined" ? db : [];
+        const qna = typeof qaData !== "undefined" ? qaData : [];
+
+        let displayList = [];
+
+        // 1. Populate list based on mode
+        if (mode === "QNA") {
+          displayList = qna.map((item) => ({
+            id: `qna-${Math.random()}`,
+            term: item.title || "",
+            term_path: "",
+            def: item.answer || "",
+            def_path: "",
+            isStatic: true,
+          }));
+        } else {
+          displayList = data.filter((i) => i.status === mode);
+        }
+
+        // 2. Filter search
+        if (searchQuery) {
+          displayList = displayList.filter(
+            (item) =>
+              (item.term && item.term.toLowerCase().includes(searchQuery)) ||
+              (item.def && item.def.toLowerCase().includes(searchQuery)),
+          );
+        }
+
+        // 3. LOGIC: No Items = No Engage Button
+        // Also hides button permanently in QNA mode
+        if (vaultBtn) {
+          if (displayList.length === 0 || mode === "QNA") {
+            vaultBtn.style.display = "none";
+          } else {
+            vaultBtn.style.display = "flex";
+          }
+        }
+
+        // 4. Update Headers
+        const titleElem = document.getElementById("title-text");
+        const badgeElem = document.getElementById("view-count-badge");
+        const titleMap = {
+          new: "Primary",
+          forgot: "Active Study",
+          know: "Vault",
+          QNA: "QNA",
+        };
+
+        if (titleElem) titleElem.innerText = titleMap[mode] || "Nexus";
+        if (badgeElem) badgeElem.innerText = displayList.length;
+
+        // 5. THE "NOTHING" LOGIC: If list is empty, show nothing
+        if (displayList.length === 0) {
+          container.innerHTML = "";
+          return;
+        }
+
+        // 6. RENDER CARDS (If items exist)
+        container.innerHTML = displayList
+          .map((item) => {
+            // Generate the audio buttons
+            const audioBtns = `${getAudioBtn("Term", item.term_path || "", item.id, "term")} ${getAudioBtn("Def", item.def_path || "", item.id, "def")}`;
+
+            let actionBtns = "";
+            if (!item.isStatic) {
+              const statusActions = {
+                new: `<button class="btn-action" style="color:var(--success)" onclick="move(${item.id}, 'know')">Know</button>
+                          <button class="btn-action" onclick="move(${item.id}, 'forgot')">Study</button>`,
+                forgot: `<button class="btn-action" style="color:var(--success)" onclick="move(${item.id}, 'know')">Mastered</button>`,
+                know: `<button class="btn-action" onclick="move(${item.id}, 'forgot')">Review</button>`,
+              };
+              actionBtns = `
+                    <button class="btn-action" style="color:var(--accent)" onclick="toggleEdit(${item.id})">Edit</button>
+                    ${statusActions[item.status] || ""}
+                    <button class="btn-action btn-delete" style=" margin-right: 10px;" onclick="deleteItem(${item.id})">DEL</button>
+                    ${audioBtns}`;
+            }
+            // else {
+            //   actionBtns = audioBtns;
+            // }
+
+            return `
+                  <div class="card-item" id="card-${item.id}">
+                    <div class="card-header" onclick="toggle(this)">
+                      <h3 id="term-${item.id}" class="termTitle">${item.term}</h3>
+                      <span class="expand-icon">▽</span>
+                    </div>
+                    <div class="card-content">
+                      <div style="min-height: 0;">
+                        <p id="def-${item.id}" style="color:var(--text-muted); line-height:1.6; margin:15px 0; white-space: pre-wrap;">${item.def}</p>
+                        <div class="action-column">${actionBtns}</div>
+                      </div>
+                    </div>
+                  </div>`;
+          })
+          .join("");
+      }
+
+      function toggleEdit(id) {
+        const termEl = document.getElementById(`term-${id}`);
+        const defEl = document.getElementById(`def-${id}`);
+        const isEditing = termEl.contentEditable === "true";
+
+        // Toggle Text Fields
+        termEl.contentEditable = !isEditing;
+        defEl.contentEditable = !isEditing;
+
+        // Toggle visibility of Play buttons vs Edit inputs
+        const inputs = document.querySelectorAll(
+          `#card-${id} .path-edit-input`,
+        );
+        const buttons = document.querySelectorAll(
+          `#card-${id} .audio-btn-wrapper button`,
+        );
+
+        inputs.forEach((i) => (i.style.display = isEditing ? "none" : "block"));
+        buttons.forEach(
+          (b) => (b.style.display = isEditing ? "block" : "none"),
+        );
+
+        if (!isEditing) {
+          event.target.innerText = "SAVE";
+        } else {
+          event.target.innerText = "Edit";
+          saveEdit(id);
+        }
+      }
+      function saveEdit(id) {
+        const termEl = document.getElementById(`term-${id}`);
+        const defEl = document.getElementById(`def-${id}`);
+        const newTermPath = document.getElementById(`input-term-${id}`).value;
+        const newDefPath = document.getElementById(`input-def-${id}`).value;
+
+        const itemIndex = db.findIndex((i) => i.id === id);
+        if (itemIndex !== -1) {
+          db[itemIndex].term = termEl.innerText.trim();
+          db[itemIndex].def = defEl.innerText.trim();
+          db[itemIndex].term_path = newTermPath;
+          db[itemIndex].def_path = newDefPath;
+          render();
+        }
+      }
+
+      function getAudioBtn(label, path, id, type) {
+        stopAudio(); // <--- CRITICAL
+        const displayPath = path || "";
+        return `
+                <span id="container-${type}-${id}" class="audio-btn-wrapper" style="display: inline-flex; align-items: center;">
+                    <button class="btn-action" id="btn-${type}-${id}" onclick="handleAudioBtnClick('${id}', '${type}')">
+                       ${label}
+                    </button>
+                    <input type="text" id="input-${type}-${id}" value="${displayPath}"
+                           class="path-edit-input" style="display:none; margin-left: 5px;" placeholder="Enter path..." />
+                </span>`;
+      }
+      function handleAudioBtnClick(id, type) {
+        const pathInput = document.getElementById(`input-${type}-${id}`);
+        const path = pathInput.value;
+
+        if (path) {
+          // Use the unified controller
+          playSpecificAudio(path);
+        } else {
+          alert("No path defined for this " + type);
+        }
+      }
+
+      // Correct implementation for your popup or card elements
+      function playSpecificAudio(path) {
+        if (!path) return;
+
+        // 1. Terminate any currently playing audio stream
+        stopAudio();
+
+        // 2. Instantiate new stream
+        currentAudio = new Audio(path);
+
+        // 3. Play and handle errors
+        currentAudio.play().catch((e) => console.error("Playback failed:", e));
+
+        // 4. Cleanup reference when finished
+        currentAudio.onended = () => {
+          if (currentAudio) currentAudio = null;
+        };
+      }
+
+      function exportData() {
+        if (!fileImported) {
+          alert("No file to export.");
+          return;
+        }
+        // This remains highly important since memory clears on refresh!
+        const blob = new Blob([JSON.stringify(db)], {
+          type: "application/json",
+        });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "nexus.json";
+        link.click();
+        URL.revokeObjectURL(url); // Cleanup memory
+      }
+
+      function importData() {
+        const input = document.createElement("input");
+        input.type = "file";
+        input.accept = ".json";
+
+        input.onchange = (e) => {
+          fileImported = e.target.files[0]; // Correctly assigned to global variable
+          if (!fileImported) return;
+
+          const display = document.getElementById("file-display");
+          if (display) {
+            display.innerText = fileImported.name.replace(".json", "");
+            display.style.color = "var(--accent)";
+          }
+
+          const reader = new FileReader();
+          reader.readAsText(fileImported);
+          reader.onload = (re) => {
+            try {
+              db = JSON.parse(re.target.result);
+              render();
+            } catch (err) {
+              alert("Invalid backup file.");
+            }
+          };
+        };
+        input.click();
+      }
+      function toggle(header) {
+        if (!header) return;
+        const item = header.closest(".card-item"); // Safer than parentElement
+        const isOpen = item.classList.contains("open");
+
+        // Close all cards (Accordion behavior)
+        document
+          .querySelectorAll(".card-item")
+          .forEach((card) => card.classList.remove("open"));
+
+        // Toggle the current one
+        if (!isOpen) {
+          item.classList.add("open");
+        }
+      }
+
+      function toggleSidebar() {
+        const fullSidebar = document.querySelector(".sidebar");
+        const miniSidebar = document.getElementById("sidebar-mini");
+
+        if (window.innerWidth > 768) {
+          if (fullSidebar.style.display === "none") {
+            // Transitioning to FULL
+            fullSidebar.style.display = "flex";
+            fullSidebar.style.animation = "miniEntrance 0.4s reverse forwards"; // Slide out mini effect
+            miniSidebar.style.display = "none";
+            fullSidebar.style.animation = "miniEntrance 0.4s ease forwards";
+          } else {
+            // Transitioning to MINI
+            fullSidebar.style.display = "none";
+            miniSidebar.style.display = "flex";
+          }
+        } else {
+          // Mobile Logic
+          fullSidebar.classList.toggle("open");
+          document.getElementById("overlay").classList.toggle("active");
+        }
+      }
+
+      function updateStats() {
+        // 1. Calculate counts in a single pass for better performance
+        const counts = db.reduce(
+          (acc, item) => {
+            acc[item.status] = (acc[item.status] || 0) + 1;
+            return acc;
+          },
+          { new: 0, forgot: 0, know: 0 },
+        );
+
+        // 2. Safely update UI elements
+        const elements = {
+          "count-new": counts.new,
+          "count-forgot": counts.forgot,
+          "count-know": counts.know,
+        };
+
+        for (const [id, val] of Object.entries(elements)) {
+          const el = document.getElementById(id);
+          if (el) el.innerText = val;
+        }
+
+        // 3. Update Mastery Bar
+        const total = db.length;
+        const pct = total === 0 ? 0 : Math.round((counts.know / total) * 100);
+
+        const pctText = document.getElementById("mastery-pct");
+        const pctFill = document.getElementById("mastery-fill");
+
+        if (pctText) pctText.innerText = `${pct}%`;
+        if (pctFill) pctFill.style.width = `${pct}%`;
+      }
+
+      function handleNav(mode) {
+        switchMode(mode);
+
+        // If on mobile, close the sidebar after selection (YouTube style)
+        if (window.innerWidth <= 768) {
+          toggleSidebar(false);
+        }
+      }
+      function togglePdfSubmenu() {
+        const submenu = document.getElementById("pdf-submenu");
+        const arrow = document.getElementById("pdf-arrow");
+        const trigger = document.getElementById("nav-pdf-trigger");
+
+        const isOpen =
+          submenu.style.maxHeight !== "0px" && submenu.style.maxHeight !== "";
+
+        if (!isOpen) {
+          submenu.style.maxHeight = "120px"; // Adjust based on content height
+          submenu.classList.add("submenu-separator-active");
+          arrow.style.transform = "rotate(180deg)";
+          arrow.style.color = "var(--accent)";
+          trigger.style.borderColor = "var(--accent)";
+        } else {
+          submenu.style.maxHeight = "0px";
+          submenu.style.borderTop = "none";
+          arrow.style.transform = "rotate(0deg)";
+          arrow.style.color = "inherit";
+          trigger.style.borderColor = "rgba(255,255,255,0.00)";
+        }
+      }
+
+      function handleSearchInput() {
+        const input = document.getElementById("global-search");
+        const clearBtn = document.getElementById("clear-searchWEB_SIDE");
+
+        // Show "X" if there is text, hide if empty
+        clearBtn.style.display = input.value.length > 0 ? "block" : "none";
+
+        // Existing render logic
+        render();
+      }
+      function clearSearchInput() {
+        const input = document.getElementById("global-search");
+        const clearBtn = document.getElementById("clear-searchWEB_SIDE");
+
+        // Clear the value
+        input.value = "";
+
+        // Hide the "X"
+        clearBtn.style.display = "none";
+
+        // Refresh the UI
+        render();
+      }
+      function showView(viewId) {
+        // 1. Hide all views
+        document
+          .querySelectorAll(".view")
+          .forEach((v) => v.classList.remove("active"));
+
+        // 2. Show the specific view
+        const targetView = document.getElementById(viewId);
+        if (targetView) {
+          targetView.classList.add("active");
+        }
+
+        // 3. Focus logic for Search View
+        if (viewId === "view-search") {
+          const fileSelector = document.getElementById("file-selector");
+          const searchInput = document.getElementById("search-input");
+
+          // Check if files exist AND the input exists
+          if (
+            fileSelector &&
+            fileSelector.files &&
+            fileSelector.files.length > 0 &&
+            searchInput
+          ) {
+            // Small delay allows the DOM to render the "active" class and layout changes
+            setTimeout(() => {
+              searchInput.focus();
+              // Optional: Highlight text for immediate typing
+              searchInput.select();
+            }, 50);
+          }
+        }
+      }
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth <= 768) {
+          toggleSidebar(false);
+        }
+      });
+      document.addEventListener("keydown", (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === "f") {
+          e.preventDefault(); // Prevent browser's default find bar
+          const searchInput = document.getElementById("global-search");
+          if (searchInput) {
+            searchInput.focus();
+            if (searchInput.value.length > 0) {
+              searchInput.select();
+            }
+          }
+        }
+        // 1. Get the vault popup element
+        const vaultPopup = document.getElementById("vault-popup");
+        const isVaultVisible =
+          vaultPopup && vaultPopup.classList.contains("show");
+
+        // 2. Navigation Keys - Now restricted so they don't fire when Ctrl/Meta is held
+        if (!e.ctrlKey && !e.metaKey) {
+          if (e.key === "ArrowRight" || e.key === "d" || e.key === "D") {
+            moveVault(1);
+          } else if (e.key === "ArrowLeft" || e.key === "a" || e.key === "A") {
+            moveVault(-1);
+          }
+        }
+
+        // 3. Space key toggle logic - ONLY works if vault is visible
+        if (e.code === "Space" && isVaultVisible) {
+          e.preventDefault();
+
+          if (currentAudio) {
+            if (currentAudio.paused) {
+              currentAudio.play();
+            } else {
+              currentAudio.pause();
+            }
+          } else if (currentVaultItem) {
+            // Play Term first, then Definition
+            playSpecificAudio(currentVaultItem.term_path);
+
+            currentAudio.onended = () => {
+              playSpecificAudio(currentVaultItem.def_path);
+              currentAudio.onended = () => {
+                currentAudio = null;
+              };
+            };
+          }
+        }
+        // 4. Seek forward/backward 5 seconds with Ctrl + Arrow keys
+        if ((e.ctrlKey || e.metaKey) && currentAudio) {
+          if (e.key === "ArrowRight") {
+            e.preventDefault();
+            currentAudio.currentTime = Math.min(
+              currentAudio.duration,
+              currentAudio.currentTime + 5,
+            );
+          } else if (e.key === "ArrowLeft") {
+            e.preventDefault();
+            currentAudio.currentTime = Math.max(
+              0,
+              currentAudio.currentTime - 5,
+            );
+          }
+        }
+      });
+      document
+        .getElementById("file-selector")
+        .addEventListener("change", (e) => {
+          const files = e.target.files;
+
+          // Check if any files were actually selected
+          if (files && files.length > 0) {
+            // Small timeout ensures the DOM has fully processed the file input
+            // before attempting to focus
+            setTimeout(() => {
+              const searchInput = document.getElementById("search-input");
+              if (searchInput) {
+                searchInput.focus();
+                // Optional: Add a visual indicator or "active" state here if needed
+                console.log("Archive loaded. Ready to scan.");
+              }
+            }, 100);
+          }
+        });
+      window.onload = () => {
+        switchMode("desc");
+        render();
+      };
+      window.onbeforeunload = function () {
+        if (
+          db.length > 0 ||
+          document.getElementById("def").value ||
+          document.getElementById("term").value
+        ) {
+          return "You have unsaved changes in your session. Are you sure you want to leave?";
+        }
+      };
+    </script>
+  </body>
+</html>

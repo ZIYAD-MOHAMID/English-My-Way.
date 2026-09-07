@@ -1,0 +1,86 @@
+# OUTPUT_DIR = "audio_exports"
+# def clean_text_for_tts(text):
+#     """Cleans text to prevent TTS errors and ensure natural pacing."""
+#     if not text:
+#         return ""
+#     # Remove phonetics and brackets
+#     text = re.sub(r'/[^/\s]{2,}/', '', text)
+#     text = re.sub(r'\[[^\]]+\]', '', text)
+#     # Convert newlines to periods for natural breathing pauses
+#     text = text.replace("\n", ". ")
+#     # Standardize whitespace
+#     text = re.sub(r'\s+', ' ', text)
+#     return text.strip()
+# async def generate_single_file(text, filename):
+#     """Generates MP3 with safety checks and ensures it goes into the OUTPUT_DIR."""
+#     if not text or text.strip() == "":
+#         print(f"⚠️ Skipped: {filename} (Empty)")
+#         return
+#     # --- THIS IS THE FIX ---
+#     # Create the full path (e.g., audio_exports/term40.mp3)
+#     full_path = os.path.join(OUTPUT_DIR, filename)
+#     try:
+#         communicate = edge_tts.Communicate(
+#             text, VOICE, rate="-5%", pitch="-5Hz")
+#         await communicate.save(full_path)
+#         print(f"✅ Generated: {full_path}")
+#     except Exception as e:
+#         print(f"❌ Error on {filename}: {e}")
+# async def process_json(json_path, start_index=1):
+#     with open(json_path, 'r', encoding='utf-8') as f:
+#         data = json.load(f)
+#    if not os.path.exists(OUTPUT_DIR):
+#         os.makedirs(OUTPUT_DIR)
+#     print(f"🚀 Starting batch processing of {len(data)} items...")
+#     for i, item in enumerate(data, start_index):
+#         # 'i' becomes 40, 41, 42...
+#         # 'item' becomes the content of the dictionary at that position
+#         term = clean_text_for_tts(item.get("term", ""))
+#         definition = clean_text_for_tts(item.get("def", ""))
+#         # Files are created for this specific loop iteration
+#         await generate_single_file(term, f"term{i}.mp3")
+#         await generate_single_file(definition, f"def{i}.mp3")
+# if __name__ == "__main__":
+#     if len(sys.argv) < 2:
+#         print("Usage: python main.py <json_file> [start_index]")
+#     else:
+#         file_path = sys.argv[1]
+#         start_idx = int(sys.argv[2]) if len(sys.argv) > 2 else 1
+#         if os.path.exists(file_path):
+#             asyncio.run(process_json(file_path, start_idx))
+#             print("\n✨ Batch process complete!")
+#         else:
+#             print(f"Error: File '{file_path}' not found.")
+
+-----
+
+# sort with Order
+# def rewrite_json_paths(json_path):
+#     """Reads the JSON file, sorts by ID, and overwrites the paths sequentially."""
+#     # 1. Load the broken JSON data
+#     with open(json_path, 'r', encoding='utf-8') as f:
+#         data = json.load(f)
+#     if not isinstance(data, list):
+#         print("Error: JSON structure must be a list of items.")
+#         return
+#     # 2. Sort items by ID to guarantee chronological order
+#     data.sort(key=lambda x: x.get('id', 0))
+#     # 3. Loop through and rewrite the paths dynamically
+#     for i, item in enumerate(data, 1):
+#         item['term_path'] = f"V/Audio/2/term{i}.mp3"
+#         item['def_path'] = f"V/Audio/2/def{i}.mp3"
+#     # 4. Save the corrected data back to the file
+#     with open(json_path, 'w', encoding='utf-8') as f:
+#         json.dump(data, f, indent=2, ensure_ascii=False)
+#     print(f"Success! Corrected {len(data)} items inside '{json_path}'.")
+# if __name__ == "__main__":
+#     # Expects the JSON file path as a command line argument
+#     if len(sys.argv) > 1:
+#         target_file = sys.argv[1]
+#         if os.path.exists(target_file):
+#             rewrite_json_paths(target_file)
+#         else:
+#             print(f"Error: The file '{target_file}' could not be found.")
+#     else:
+#         print("Error: Missing file path.")
+#         print("Usage: python fix_json.py test.json")

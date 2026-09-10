@@ -24,8 +24,6 @@
       <circle cx="12" cy="12" r="3" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="0.5"/>
     </svg>'
     />
-    <!-- Viewport (fixed your mobile behavior slightly) -->
-
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
@@ -2828,6 +2826,7 @@
     </style>
   </head>
   <body>
+    <!-- Mobile Navigation Bar -->
     <div class="mobile-nav-bar">
       <div class="menu-trigger" onclick="toggleSidebar()">&#9776;</div>
       <div class="logo-text">
@@ -2835,9 +2834,113 @@
       </div>
       <div class="nav-spacer"></div>
     </div>
+    <!-- Mini 'Mobile' Sidebar -->
+    <aside class="sidebar-mini" id="sidebar-mini">
+      <div class="mini-header" onclick="toggleSidebar()">
+        <div class="menu-trigger">&#9776;</div>
+      </div>
 
-    <div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+      <div class="mini-nav-group">
+        <div
+          class="mini-card"
+          onclick="switchMode('desc')"
+          title="View System Description"
+        >
+          <span class="mini-icon">
+            <svg
+              class="nexus-icon mini-svg-override"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2L4.5 20.29L5.21 21L12 18L18.79 21L19.5 20.29L12 2Z"
+                fill="url(#grad1_mini)"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="3"
+                stroke="rgba(255, 255, 255, 0.5)"
+                stroke-width="0.5"
+                fill="rgba(255, 255, 255, 0.1)"
+              />
+              <defs>
+                <linearGradient
+                  id="grad1_mini"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style="stop-color: var(--accent); stop-opacity: 1"
+                  />
+                  <stop
+                    offset="100%"
+                    style="
+                      stop-color: var(--accent-2, var(--border));
+                      stop-opacity: 1;
+                    "
+                  />
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="mini-label">System</span>
+        </div>
 
+        <div class="mini-card" onclick="switchMode('new')" title="Primary">
+          <span class="mini-icon">◈</span>
+          <span class="mini-label">Primary</span>
+        </div>
+
+        <div class="mini-card" onclick="switchMode('forgot')" title="Study">
+          <span class="mini-icon">⟳</span>
+          <span class="mini-label">Study</span>
+        </div>
+
+        <div class="mini-card" onclick="switchMode('know')" title="Vault">
+          <span class="mini-icon">✦</span>
+          <span class="mini-label">Vault</span>
+        </div>
+
+        <div
+          class="mini-card"
+          onclick="switchMode('search')"
+          title="Global Search"
+        >
+          <span class="mini-icon">⌬</span>
+          <span class="mini-label">Global Search</span>
+        </div>
+
+        <br />
+
+        <div
+          class="mini-card"
+          id="nav-pdf"
+          onclick="toggleSidebar()"
+          title="Grammar"
+        >
+          <span class="mini-icon">GA</span>
+          <span class="mini-label">GRAMMAR ARCHIVE</span>
+        </div>
+
+        <br />
+
+        <div
+          class="mini-card mini-add"
+          onclick="switchMode('add')"
+          title="New Anchor"
+        >
+          <span class="mini-icon">&#10010;</span>
+          <span class="mini-label">Add</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main 'Web' Sidebar -->
     <aside class="sidebar">
       <div class="logo-container" title="View System Description">
         <div class="menu-trigger" onclick="toggleSidebar()">&#9776;</div>
@@ -2964,10 +3067,6 @@
               </div>
             </div>
           </div>
-
-          <div class="nav-card" id="nav-QNA" onclick="switchMode('QNA')">
-            <span>Questions and Answers</span>
-          </div>
         </div>
       </div>
 
@@ -2975,117 +3074,8 @@
         &#10010; NEW ANCHOR
       </button>
     </aside>
-    <aside class="sidebar-mini" id="sidebar-mini">
-      <div class="mini-header" onclick="toggleSidebar()">
-        <div class="menu-trigger">&#9776;</div>
-      </div>
-
-      <div class="mini-nav-group">
-        <div
-          class="mini-card"
-          onclick="switchMode('desc')"
-          title="View System Description"
-        >
-          <span class="mini-icon">
-            <svg
-              class="nexus-icon mini-svg-override"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 2L4.5 20.29L5.21 21L12 18L18.79 21L19.5 20.29L12 2Z"
-                fill="url(#grad1_mini)"
-              />
-              <circle
-                cx="12"
-                cy="12"
-                r="3"
-                stroke="rgba(255, 255, 255, 0.5)"
-                stroke-width="0.5"
-                fill="rgba(255, 255, 255, 0.1)"
-              />
-              <defs>
-                <linearGradient
-                  id="grad1_mini"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="100%"
-                >
-                  <stop
-                    offset="0%"
-                    style="stop-color: var(--accent); stop-opacity: 1"
-                  />
-                  <stop
-                    offset="100%"
-                    style="
-                      stop-color: var(--accent-2, var(--border));
-                      stop-opacity: 1;
-                    "
-                  />
-                </linearGradient>
-              </defs>
-            </svg>
-          </span>
-          <span class="mini-label">System</span>
-        </div>
-
-        <div class="mini-card" onclick="switchMode('new')" title="Primary">
-          <span class="mini-icon">◈</span>
-          <span class="mini-label">Primary</span>
-        </div>
-
-        <div class="mini-card" onclick="switchMode('forgot')" title="Study">
-          <span class="mini-icon">⟳</span>
-          <span class="mini-label">Study</span>
-        </div>
-
-        <div class="mini-card" onclick="switchMode('know')" title="Vault">
-          <span class="mini-icon">✦</span>
-          <span class="mini-label">Vault</span>
-        </div>
-
-        <div
-          class="mini-card"
-          onclick="switchMode('search')"
-          title="Global Search"
-        >
-          <span class="mini-icon">⌬</span>
-          <span class="mini-label">Global Search</span>
-        </div>
-
-        <br />
-
-        <div
-          class="mini-card"
-          id="nav-pdf"
-          onclick="toggleSidebar()"
-          title="Grammar"
-        >
-          <span class="mini-icon">GA</span>
-          <span class="mini-label">GRAMMAR ARCHIVE</span>
-        </div>
-
-        <div class="mini-card" onclick="switchMode('QNA')" title="Q&A">
-          <span class="mini-icon">QA</span>
-          <span class="mini-label">Questions and Answers</span>
-        </div>
-
-        <br />
-
-        <div
-          class="mini-card mini-add"
-          onclick="switchMode('add')"
-          title="New Anchor"
-        >
-          <span class="mini-icon">&#10010;</span>
-          <span class="mini-label">Add</span>
-        </div>
-      </div>
-    </aside>
-
     <main class="main">
+      <!-- Main 'Web' header Area -->
       <header class="study-pipeline">
         <div class="pipeline-group">
           <div class="menu-trigger secondboy" onclick="toggleSidebar()">
@@ -3102,6 +3092,7 @@
         </div>
 
         <div class="header-actions">
+          <!-- Search on imported data -->
           <div class="search-wrapper" id="search-container">
             <span class="search-icon">⌕</span>
             <input
@@ -3154,9 +3145,10 @@
         </div>
       </header>
 
+      <!-- the main content area -->
       <div class="content-area">
+        <!-- ○ Engage System popup -->
         <div id="focus-overlay"></div>
-
         <div id="vault-popup" class="central-synapse">
           <div class="synapse-content">
             <div class="focus-header">
@@ -3174,6 +3166,7 @@
           </div>
         </div>
 
+        <!-- ◈ Primary ⟳ Study ✦ Vault -->
         <div id="view-display" class="view">
           <h1 id="view-title">
             <span id="title-text">The Vault</span>
@@ -3192,6 +3185,7 @@
           <div id="card-container"></div>
         </div>
 
+        <!-- Add New Anchor View -->
         <div id="view-add" class="view">
           <h1>Add New Anchor</h1>
           <div class="mastery-form">
@@ -3205,6 +3199,7 @@
           </div>
         </div>
 
+        <!-- A hero page view -->
         <div id="view-desc" class="view active">
           <div class="neural-grid" style="display: block"></div>
           <div class="ambient-glow"></div>
@@ -3323,6 +3318,7 @@
           </div>
         </div>
 
+        <!-- ⌬ Global Search -->
         <div id="view-search" class="view">
           <div class="search-header-flex">
             <h1>Archive Search</h1>
@@ -3368,105 +3364,14 @@
           <div id="search-results-container"></div>
         </div>
 
+        <!-- PDF View GRAMMAR ARCHIVE -->
         <div id="view-pdf" class="view">
           <div id="pdf-container"></div>
         </div>
       </div>
     </main>
-      
+
     <script>
-      const data = [
-        `I’m Ziyad Mohamed. I’m a 22-year-old I've just graduated with a Bachelor’s degree in Law from Helwan University,
-studying law gave me a really sharp eye for detail and taught me how to stay calm and analytical when resolving complex issues.
-skills I find myself using every single day in customer service.
-
-In terms of experience, I worked as a Customer Service Representative in a restaurant call center for a year.
-
-I handled inbound calls for reservations, inquiries, and complaints, assisted customers with menu details and order customization, and coordinated with staff. 
-
-This experience helped me strengthen my communication skills and ability to work effectively under pressure.`,
-        `One of the movies that has inspired me the most is The Pursuit of Happyness. I admire it because it powerfully portrays resilience, determination, and the importance of never giving up in the face of extreme adversity. The main character goes through severe financial hardship and personal struggles, yet he continues striving for a better future for himself and his son. What stands out to me the most is his resilience and his ability to keep believing in himself despite constant failures. What makes this story so impactful for me is the message that perseverance and self-belief can eventually lead to success, even when circumstances seem overwhelming. Whenever I face challenges in my own life, this film reminds me to stay determined and keep moving forward. At the end of the day, the movie shows that persistence and hard work are often rewarded`,
-
-        `I’m interested in working as a call center agent because it allows me to interact daily with different types of customers, including native and non-native English speakers. This environment will help me enhance my communication skills and reach a higher level of fluency. In addition, gaining professional customer service experience will strengthen my CV and open doors to more career opportunities in multinational companies.`,
-
-        `You should hire me because I have a solid B2 level in English, which enables me to communicate effectively with customers. In addition, I’m patient, adaptable, and I enjoy solving problems. I can handle different types of customers calmly and professionally, and I’m always focused on providing a positive customer experience.`,
-
-        `If a customer is angry, I would first remain calm and professional. I would actively listen without interrupting and acknowledge their frustration to show empathy. Once they feel heard, I would clarify the issue, explain the available solutions, and work efficiently to resolve the problem. My goal would be to turn a negative experience into a positive one while maintaining company policy.`,
-
-        `If I don’t know the answer to a customer’s question, I would remain confident and transparent. I would politely inform the customer that I need to verify the information to ensure accuracy. Then, I would quickly consult my supervisor or use available resources to find the correct solution. After that, I would follow up with the customer promptly. I also see situations like this as learning opportunities to improve my knowledge for the future.`,
-
-        `I perform well under pressure because I stay calm, focused, and solution-oriented. In high-volume situations, I prioritize tasks and manage my time effectively to maintain performance and quality. I also understand the importance of teamwork, so if necessary, I communicate with my supervisor for guidance. Even under pressure, my goal is to ensure every customer receives professional and efficient service.`,
-
-        `One of my weaknesses is that I tend to set very high standards for myself. When I commit to something, I invest a lot of effort and sometimes become overly self-critical if the results are not immediate. However, I’ve learned to view challenges as opportunities for growth, and I now focus more on continuous improvement rather than perfection.`,
-
-        `In the next three years, I see myself becoming a highly skilled customer service professional with advanced communication abilities. I plan to improve my English to a C1 or C2 level and potentially learn another language like German or French, which would add more value to CV, possibly moving into a senior agent or team leader role while continuously developing my professional skills.`,
-
-        `What differentiates me from other candidates is my combination of technical and communication skills. My background in web development allows me to adapt quickly to new systems and software platforms, which is essential in a call center environment. I’m also a fast learner, an active listener, and able to manage conversations while taking accurate notes. Furthermore, my academic background in law has strengthened my analytical thinking and ability to handle situations professionally.  .`,
-
-        `One challenging situation I faced was handling an upset customer who called to complain about a delayed reservation and incorrect order details. The customer was frustrated and speaking quickly, which made the situation more intense.
-
-                  I stayed calm and listened carefully without interrupting, showing empathy and understanding. I apologized for the inconvenience and reassured the customer that I would resolve the issue. I quickly checked the booking system, identified the mistake, and coordinated with the restaurant staff to prioritize their reservation and correct the order.
-
-                  In the end, the issue was resolved smoothly, and the customer appreciated the quick response and professional handling. This experience taught me the importance of staying calm under pressure, active listening, and taking fast, effective action to ensure customer satisfaction.`,
-
-        `If a customer is shouting or blaming me unfairly, I would remain calm and professional. I would actively listen without interrupting and acknowledge their frustration, even if the issue is not my responsibility. I understand that customers are often reacting to the situation, not the person. After clarifying the problem, I would focus on offering the best possible solution. My goal would be to de-escalate the situation and ensure the customer feels heard and supported.`,
-
-        `If I receive negative feedback from my supervisor, I see it as an opportunity for growth. I would listen carefully and seek clarification to fully understand the areas that need improvement. I would take responsibility for my performance and create a clear action plan to improve. I believe constructive feedback is essential for professional development, and I always aim to learn from it and perform better in the future.`,
-
-        `In my previous software development role, I worked within a cross-functional team that included back-end developers, a UI/UX designer, and a team leader. As a front-end developer, my responsibility was to translate design concepts into functional interfaces while coordinating closely with the back-end team to ensure system integration. I maintained clear communication, met deadlines, and contributed to problem-solving discussions. This experience strengthened my teamwork, communication, and collaboration skills—qualities that are equally important in a call center environment.`,
-
-        `If I had a disagreement with my team leader, I would handle it professionally and respectfully. I would express my perspective clearly and provide logical reasoning for my suggestion. At the same time, I understand that leadership involves broader responsibility and experience. If the final decision differs from my opinion, I would fully support it and ensure the team’s objectives are achieved. I believe constructive discussions strengthen teamwork rather than weaken it.`,
-
-        `If a customer tells me they can’t pay their bill, I would first show empathy and acknowledge their situation. I would ask questions to better understand their circumstances. Then, I would inform them about any available payment plans, extensions, or alternative solutions according to company policy. My goal would be to support the customer while protecting the company’s interests.`,
-
-        `When handling multiple calls, I remain calm and organized. I prioritize tasks based on urgency while ensuring each customer receives full attention during their interaction. I focus on efficiency without compromising service quality. If the workload becomes overwhelming, I communicate with my supervisor to maintain performance standards. My goal is to manage pressure effectively while delivering consistent and professional service.`,
-        ` I successfully completed my contract in my previous software development role. After that, I reflected on my career goals and decided to pursue an opportunity that would allow me to strengthen my communication and customer interaction skills. I believe that working in a call center environment will help me grow professionally while contributing effectively to the company`,
-
-        `A typical day in my role as a Customer Service Representative started with checking the booking system and reviewing any updates or special reservations.
-
-                  Throughout the day, I handled inbound calls from customers for reservations, inquiries, and complaints. I assisted them with menu details, order customization, and availability, making sure to provide clear and accurate information.
-
-                  I also updated reservations in the system and coordinated with the restaurant staff to confirm bookings and ensure everything ran smoothly. When issues came up, I focused on resolving them quickly and professionally while keeping a calm and polite tone.
-
-                  Overall, my goal each day was to deliver excellent customer service and ensure a positive experience for every customer.
-                  `,
-
-        `If I got 1,000,000, I would divide it wisely instead of spending it all at once. First, I would invest a good portion of it in something stable, like real estate or a business, so it can grow over time and give me long-term financial security.
-
-                  Then, I would use part of the money to improve my skills and education, especially in my field, because I believe investing in myself gives the best return.
-
-                  I would also support my family and make sure they are comfortable. And of course, I’d keep a small portion to enjoy life a bit—traveling or doing things I love—but in a balanced way.
-
-                  Overall, my goal would be to turn that money into something sustainable, not just spend it quickly.`,
-      ];
-      const titles = [
-        "Tell me about yourself",
-        "movie",
-        "Why call center?",
-        "Why hire you?",
-        "Angry customer?",
-        "Don't know answer?",
-        "Under pressure",
-        "Greatest weakness",
-        "In 3 years",
-        "What makes you different",
-        "Challenging situation",
-        "Unfair blame",
-        "Negative feedback",
-        "Teamwork experience",
-        "disagreement with my team leader",
-        "Customer can't pay bill",
-        "Handling multiple calls",
-        "living your last work",
-        "A typical day",
-
-        "1,000,000",
-      ];
-      const qaData = titles.map((title, index) => ({
-        title: title,
-        answer: data[index],
-      }));
-
       let allData = [];
       let db = [];
       let currentMode = "desc";
@@ -3483,7 +3388,7 @@ This experience helped me strengthen my communication skills and ability to work
         }
       }
 
-      // --- GLOBAL STATE ---
+      // --- "Engage System" logic ---
       let vaultIndex = 0;
       let vaultTimer;
       let isVaultReminderActive = false; // Always start as FALSE (OFF)
@@ -3647,6 +3552,27 @@ This experience helped me strengthen my communication skills and ability to work
           if (btnText) btnText.innerText = "Engage System";
         }
       }
+
+      // --- Correct implementation for your popup or card elements ---
+      function playSpecificAudio(path) {
+        if (!path) return;
+
+        // 1. Terminate any currently playing audio stream
+        stopAudio();
+
+        // 2. Instantiate new stream
+        currentAudio = new Audio(path);
+
+        // 3. Play and handle errors
+        currentAudio.play().catch((e) => console.error("Playback failed:", e));
+
+        // 4. Cleanup reference when finished
+        currentAudio.onended = () => {
+          if (currentAudio) currentAudio = null;
+        };
+      }
+
+      // --- File Import Reading json data Logic ---
       document
         .getElementById("file-selector")
         .addEventListener("change", async function (event) {
@@ -3682,32 +3608,9 @@ This experience helped me strengthen my communication skills and ability to work
             searchInput.focus();
           }
         });
-      // document
-      //   .getElementById("file-selector")
-      //   .addEventListener("change", async function (event) {
-      //     const files = Array.from(event.target.files);
 
-      //     const loadPromises = files.map((file) => {
-      //       return new Promise((resolve) => {
-      //         const reader = new FileReader();
-      //         reader.onload = (e) => {
-      //           try {
-      //             const json = JSON.parse(e.target.result);
-      //             const data = Array.isArray(json) ? json : [json];
-      //             resolve(data);
-      //           } catch (err) {
-      //             console.error(`Corrupt fragment: ${file.name}`);
-      //             resolve([]);
-      //           }
-      //         };
-      //         reader.readAsText(file);
-      //       });
-      //     });
-
-      //     const results = await Promise.all(loadPromises);
-      //     allData = results.flat(); // Flattens all arrays into one
-      //     executeSearch();
-      //   });
+      // --- Global Search Logic ---
+      //      --- Clear Databanks from the Global Search Logic ---
       function clearDatabanks() {
         // 1. Wipe the data memory
         stopAudio();
@@ -3728,6 +3631,7 @@ This experience helped me strengthen my communication skills and ability to work
 
         console.log("System Purged: All local fragments cleared.");
       }
+      //      --- the indicator of what you got before searching ---
       function showIdleState() {
         const container = document.getElementById("search-results-container");
         if (!container) return;
@@ -3770,6 +3674,7 @@ This experience helped me strengthen my communication skills and ability to work
                         </div>`;
         }
       }
+      //      --- The main search execution logic ---
       function executeSearch() {
         const queryInput = document.getElementById("search-input");
         const clearBtn = document.getElementById("clear-search");
@@ -3842,6 +3747,7 @@ This experience helped me strengthen my communication skills and ability to work
           })
           .join("");
       }
+      //      --- the button of copy the result to your session ---
       function copyToCurrentSession(item) {
         console.log(item);
 
@@ -3862,7 +3768,7 @@ This experience helped me strengthen my communication skills and ability to work
         switchMode(newItem.status || "new");
       }
 
-      // Theme Rotation Array
+      // --- Theme Rotation Array ---
       const themes = [
         "default",
         "2",
@@ -3916,14 +3822,16 @@ This experience helped me strengthen my communication skills and ability to work
 
         applyTheme(themes[nextIndex]);
       }
-
-      // RESTORING from local storage on page load
+      //       --- RESTORING from local storage on page load
       document.addEventListener("DOMContentLoaded", () => {
         const savedTheme = localStorage.getItem("system-theme-matrix");
         if (savedTheme && savedTheme !== "default") {
           document.documentElement.setAttribute("data-theme", savedTheme);
         }
       });
+
+      // --- header json buttons controllers ---
+      //       --- System Wipe ---
       function nuclearReset() {
         const firstCheck = confirm(
           "⚠ WARNING: This will clear all data in your current session. Proceed?",
@@ -3949,11 +3857,355 @@ This experience helped me strengthen my communication skills and ability to work
           }
         }
       }
-      function openPDF(pdfUrl) {
-        const container = document.getElementById("pdf-container");
-        container.innerHTML = `<iframe src="${pdfUrl}" width="100%" height="100%" style="border:none;"></iframe>`;
-        switchMode("pdf");
+      //       --- exportData button ---
+      function exportData() {
+        if (!fileImported) {
+          alert("No file to export.");
+          return;
+        }
+        // This remains highly important since memory clears on refresh!
+        const blob = new Blob([JSON.stringify(db)], {
+          type: "application/json",
+        });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "nexus.json";
+        link.click();
+        URL.revokeObjectURL(url); // Cleanup memory
       }
+      //       --- importData button ---
+      function importData() {
+        const input = document.createElement("input");
+        input.type = "file";
+        input.accept = ".json";
+
+        input.onchange = (e) => {
+          fileImported = e.target.files[0]; // Correctly assigned to global variable
+          if (!fileImported) return;
+
+          const display = document.getElementById("file-display");
+          if (display) {
+            display.innerText = fileImported.name.replace(".json", "");
+            display.style.color = "var(--accent)";
+          }
+
+          const reader = new FileReader();
+          reader.readAsText(fileImported);
+          reader.onload = (re) => {
+            try {
+              db = JSON.parse(re.target.result);
+              render();
+            } catch (err) {
+              alert("Invalid backup file.");
+            }
+          };
+        };
+        input.click();
+      }
+      //       --- Search Input Logic on one file json level ---
+      function handleSearchInput() {
+        const input = document.getElementById("global-search");
+        const clearBtn = document.getElementById("clear-searchWEB_SIDE");
+
+        // Show "X" if there is text, hide if empty
+        clearBtn.style.display = input.value.length > 0 ? "block" : "none";
+
+        // Existing render logic
+        render();
+      }
+      //       --- an X to Clear Search Input text ---
+      function clearSearchInput() {
+        const input = document.getElementById("global-search");
+        const clearBtn = document.getElementById("clear-searchWEB_SIDE");
+
+        // Clear the value
+        input.value = "";
+
+        // Hide the "X"
+        clearBtn.style.display = "none";
+
+        // Refresh the UI
+        render();
+      }
+
+      // --- item buttons controls ---
+      //       --- Move item to another status (Review/Mastered) button ---
+      function move(id, newStatus) {
+        // 1. Kill any active audio immediately upon interaction
+        stopAudio();
+
+        // 2. Perform the data shift
+        const index = db.findIndex((item) => item.id === id);
+        if (index !== -1) {
+          db[index].status = newStatus;
+        }
+
+        // 3. Refresh the UI
+        render();
+
+        // 4. If the system is currently "Active" (in the vault),
+        // ensure the UI reflects the change in the vault sequence
+        if (isVaultReminderActive) {
+          // Re-trigger the vault to ensure the current item is valid
+          // or to show the next logical item
+          clearTimeout(vaultTimer);
+          vaultTimer = setTimeout(showVaultReminder, 500);
+        }
+      }
+      //       --- delet item (DEL) button ---
+      function deleteItem(id) {
+        stopAudio(); // <--- CRITICAL
+        if (!confirm("Remove from current session?")) return;
+        stopAudio();
+        db = db.filter((i) => i.id !== id);
+        render();
+      }
+      //       --- Save/Edit Item button ---
+      function toggleEdit(id) {
+        const termEl = document.getElementById(`term-${id}`);
+        const defEl = document.getElementById(`def-${id}`);
+        const isEditing = termEl.contentEditable === "true";
+
+        // Toggle Text Fields
+        termEl.contentEditable = !isEditing;
+        defEl.contentEditable = !isEditing;
+
+        // Toggle visibility of Play buttons vs Edit inputs
+        const inputs = document.querySelectorAll(
+          `#card-${id} .path-edit-input`,
+        );
+        const buttons = document.querySelectorAll(
+          `#card-${id} .audio-btn-wrapper button`,
+        );
+
+        inputs.forEach((i) => (i.style.display = isEditing ? "none" : "block"));
+        buttons.forEach(
+          (b) => (b.style.display = isEditing ? "block" : "none"),
+        );
+
+        if (!isEditing) {
+          event.target.innerText = "SAVE";
+        } else {
+          event.target.innerText = "Edit";
+          saveEdit(id);
+        }
+      }
+      function saveEdit(id) {
+        const termEl = document.getElementById(`term-${id}`);
+        const defEl = document.getElementById(`def-${id}`);
+        const newTermPath = document.getElementById(`input-term-${id}`).value;
+        const newDefPath = document.getElementById(`input-def-${id}`).value;
+
+        const itemIndex = db.findIndex((i) => i.id === id);
+        if (itemIndex !== -1) {
+          db[itemIndex].term = termEl.innerText.trim();
+          db[itemIndex].def = defEl.innerText.trim();
+          db[itemIndex].term_path = newTermPath;
+          db[itemIndex].def_path = newDefPath;
+          render();
+        }
+      }
+      //       --- Audio Button Logic ---
+      function getAudioBtn(label, path, id, type) {
+        stopAudio(); // <--- CRITICAL
+        const displayPath = path || "";
+        return `
+                <span id="container-${type}-${id}" class="audio-btn-wrapper" style="display: inline-flex; align-items: center;">
+                    <button class="btn-action" id="btn-${type}-${id}" onclick="handleAudioBtnClick('${id}', '${type}')">
+                       ${label}
+                    </button>
+                    <input type="text" id="input-${type}-${id}" value="${displayPath}"
+                           class="path-edit-input" style="display:none; margin-left: 5px;" placeholder="Enter path..." />
+                </span>`;
+      }
+      function handleAudioBtnClick(id, type) {
+        const pathInput = document.getElementById(`input-${type}-${id}`);
+        const path = pathInput.value;
+
+        if (path) {
+          // Use the unified controller
+          playSpecificAudio(path);
+        } else {
+          alert("No path defined for this " + type);
+        }
+      }
+
+      // --- add New Item Logic to your json file ---
+      function save() {
+        const t = document.getElementById("term").value.trim();
+        const d = document.getElementById("def").value.trim();
+
+        // Ensure we have data and know which file is active
+        if (!t || !d || !fileImported) {
+          alert("Please import a file first.");
+          return;
+        }
+
+        // Extract folder name: Removes extension, splits by slashes, gets last part
+        const folderName = fileImported.name
+          .replace(".json", "")
+          .split("/")
+          .pop();
+        // Extract all digits from the string
+        const numberMatch = folderName.match(/\d+/);
+        const nexusNumber = numberMatch ? numberMatch[0] : null;
+
+        // Push to local array
+        db.push({
+          id: Date.now(),
+          term: t,
+          def: d,
+          status: "new",
+          // Use the length or a unique ID based on your preference
+          term_path: `V/Audio/${nexusNumber}/term${db.length + 1}.mp3`,
+          def_path: `V/Audio/${nexusNumber}/def${db.length + 1}.mp3`,
+        });
+
+        document.getElementById("term").value = "";
+        document.getElementById("def").value = "";
+
+        // Ensure your render/switchMode functions follow here
+        render();
+        switchMode("new");
+      }
+
+      // --- Render items json data Logic ---
+      function render() {
+        const container = document.getElementById("card-container");
+        const searchInput = document.getElementById("global-search");
+        const searchQuery = searchInput ? searchInput.value.toLowerCase() : "";
+        const vaultBtn = document.getElementById("vault-start-btn");
+
+        if (typeof updateStats === "function") updateStats();
+
+        const mode = typeof currentMode !== "undefined" ? currentMode : "desc";
+        const data = typeof db !== "undefined" ? db : [];
+
+        let displayList = [];
+        displayList = data.filter((i) => i.status === mode);
+
+        // 2. Filter search
+        if (searchQuery) {
+          displayList = displayList.filter(
+            (item) =>
+              (item.term && item.term.toLowerCase().includes(searchQuery)) ||
+              (item.def && item.def.toLowerCase().includes(searchQuery)),
+          );
+        }
+
+        // 3. LOGIC: No Items = No Engage Button
+        if (vaultBtn) {
+          vaultBtn.style.display = "flex";
+        }
+
+        // 4. Update Headers
+        const titleElem = document.getElementById("title-text");
+        const badgeElem = document.getElementById("view-count-badge");
+        const titleMap = {
+          new: "Primary",
+          forgot: "Active Study",
+          know: "Vault",
+        };
+
+        if (titleElem) titleElem.innerText = titleMap[mode] || "Nexus";
+        if (badgeElem) badgeElem.innerText = displayList.length;
+
+        // 5. THE "NOTHING" LOGIC: If list is empty, show nothing
+        if (displayList.length === 0) {
+          container.innerHTML = "";
+          return;
+        }
+
+        // 6. RENDER CARDS (If items exist)
+        container.innerHTML = displayList
+          .map((item) => {
+            // Generate the audio buttons
+            const audioBtns = `${getAudioBtn("Term", item.term_path || "", item.id, "term")} ${getAudioBtn("Def", item.def_path || "", item.id, "def")}`;
+
+            let actionBtns = "";
+            if (!item.isStatic) {
+              const statusActions = {
+                new: `<button class="btn-action" style="color:var(--success)" onclick="move(${item.id}, 'know')">Know</button>
+                          <button class="btn-action" onclick="move(${item.id}, 'forgot')">Study</button>`,
+                forgot: `<button class="btn-action" style="color:var(--success)" onclick="move(${item.id}, 'know')">Mastered</button>`,
+                know: `<button class="btn-action" onclick="move(${item.id}, 'forgot')">Review</button>`,
+              };
+              actionBtns = `
+                    <button class="btn-action" style="color:var(--accent)" onclick="toggleEdit(${item.id})">Edit</button>
+                    ${statusActions[item.status] || ""}
+                    <button class="btn-action btn-delete" style=" margin-right: 10px;" onclick="deleteItem(${item.id})">DEL</button>
+                    ${audioBtns}`;
+            }
+            // else {
+            //   actionBtns = audioBtns;
+            // }
+
+            return `
+                  <div class="card-item" id="card-${item.id}">
+                    <div class="card-header" onclick="toggle(this)">
+                      <h3 id="term-${item.id}" class="termTitle">${item.term}</h3>
+                      <span class="expand-icon">▽</span>
+                    </div>
+                    <div class="card-content">
+                      <div style="min-height: 0;">
+                        <p id="def-${item.id}" style="color:var(--text-muted); line-height:1.6; margin:15px 0; white-space: pre-wrap;">${item.def}</p>
+                        <div class="action-column">${actionBtns}</div>
+                      </div>
+                    </div>
+                  </div>`;
+          })
+          .join("");
+      }
+      function toggle(header) {
+        if (!header) return;
+        const item = header.closest(".card-item"); // Safer than parentElement
+        const isOpen = item.classList.contains("open");
+
+        // Close all cards (Accordion behavior)
+        document
+          .querySelectorAll(".card-item")
+          .forEach((card) => card.classList.remove("open"));
+
+        // Toggle the current one
+        if (!isOpen) {
+          item.classList.add("open");
+        }
+      }
+      function updateStats() {
+        // 1. Calculate counts in a single pass for better performance
+        const counts = db.reduce(
+          (acc, item) => {
+            acc[item.status] = (acc[item.status] || 0) + 1;
+            return acc;
+          },
+          { new: 0, forgot: 0, know: 0 },
+        );
+
+        // 2. Safely update UI elements
+        const elements = {
+          "count-new": counts.new,
+          "count-forgot": counts.forgot,
+          "count-know": counts.know,
+        };
+
+        for (const [id, val] of Object.entries(elements)) {
+          const el = document.getElementById(id);
+          if (el) el.innerText = val;
+        }
+
+        // 3. Update Mastery Bar
+        const total = db.length;
+        const pct = total === 0 ? 0 : Math.round((counts.know / total) * 100);
+
+        const pctText = document.getElementById("mastery-pct");
+        const pctFill = document.getElementById("mastery-fill");
+
+        if (pctText) pctText.innerText = `${pct}%`;
+        if (pctFill) pctFill.style.width = `${pct}%`;
+      }
+
+      // --- switchMode methods to show data ---
       function switchMode(mode) {
         currentMode = mode;
         vaultIndex = 0;
@@ -4036,7 +4288,6 @@ This experience helped me strengthen my communication skills and ability to work
           new: "nav-new",
           forgot: "nav-forgot",
           know: "nav-know",
-          QNA: "nav-QNA",
           search: "nav-search",
           pdf: "nav-pdf",
         }[mode];
@@ -4050,336 +4301,20 @@ This experience helped me strengthen my communication skills and ability to work
         // --- 6. Final UI Update ---
         render();
       }
+      //       --- switch to PDF viewer ---
+      function openPDF(pdfUrl) {
+        const container = document.getElementById("pdf-container");
+        container.innerHTML = `<iframe src="${pdfUrl}" width="100%" height="100%" style="border:none;"></iframe>`;
+        switchMode("pdf");
+      }
+      //       --- show/hide Additional & Pathways ---
       function toggleDiv(id) {
         const el = document.getElementById(id);
         if (el) {
           el.style.display = el.style.display === "none" ? "block" : "none";
         }
       }
-
-      function move(id, newStatus) {
-        // 1. Kill any active audio immediately upon interaction
-        stopAudio();
-
-        // 2. Perform the data shift
-        const index = db.findIndex((item) => item.id === id);
-        if (index !== -1) {
-          db[index].status = newStatus;
-        }
-
-        // 3. Refresh the UI
-        render();
-
-        // 4. If the system is currently "Active" (in the vault),
-        // ensure the UI reflects the change in the vault sequence
-        if (isVaultReminderActive) {
-          // Re-trigger the vault to ensure the current item is valid
-          // or to show the next logical item
-          clearTimeout(vaultTimer);
-          vaultTimer = setTimeout(showVaultReminder, 500);
-        }
-      }
-
-      function deleteItem(id) {
-        stopAudio(); // <--- CRITICAL
-        if (!confirm("Remove from current session?")) return;
-        stopAudio();
-        db = db.filter((i) => i.id !== id);
-        render();
-      }
-      function save() {
-        const t = document.getElementById("term").value.trim();
-        const d = document.getElementById("def").value.trim();
-
-        // Ensure we have data and know which file is active
-        if (!t || !d || !fileImported) {
-          alert("Please import a file first.");
-          return;
-        }
-
-        // Extract folder name: Removes extension, splits by slashes, gets last part
-        const folderName = fileImported.name
-          .replace(".json", "")
-          .split("/")
-          .pop();
-        // Extract all digits from the string
-        const numberMatch = folderName.match(/\d+/);
-        const nexusNumber = numberMatch ? numberMatch[0] : null;
-
-        // Push to local array
-        db.push({
-          id: Date.now(),
-          term: t,
-          def: d,
-          status: "new",
-          // Use the length or a unique ID based on your preference
-          term_path: `V/Audio/${nexusNumber}/term${db.length + 1}.mp3`,
-          def_path: `V/Audio/${nexusNumber}/def${db.length + 1}.mp3`,
-        });
-
-        document.getElementById("term").value = "";
-        document.getElementById("def").value = "";
-
-        // Ensure your render/switchMode functions follow here
-        render();
-        switchMode("new");
-      }
-      function render() {
-        const container = document.getElementById("card-container");
-        const searchInput = document.getElementById("global-search");
-        const searchQuery = searchInput ? searchInput.value.toLowerCase() : "";
-        const vaultBtn = document.getElementById("vault-start-btn");
-
-        if (typeof updateStats === "function") updateStats();
-
-        const mode = typeof currentMode !== "undefined" ? currentMode : "desc";
-        const data = typeof db !== "undefined" ? db : [];
-        const qna = typeof qaData !== "undefined" ? qaData : [];
-
-        let displayList = [];
-
-        // 1. Populate list based on mode
-        if (mode === "QNA") {
-          displayList = qna.map((item) => ({
-            id: `qna-${Math.random()}`,
-            term: item.title || "",
-            term_path: "",
-            def: item.answer || "",
-            def_path: "",
-            isStatic: true,
-          }));
-        } else {
-          displayList = data.filter((i) => i.status === mode);
-        }
-
-        // 2. Filter search
-        if (searchQuery) {
-          displayList = displayList.filter(
-            (item) =>
-              (item.term && item.term.toLowerCase().includes(searchQuery)) ||
-              (item.def && item.def.toLowerCase().includes(searchQuery)),
-          );
-        }
-
-        // 3. LOGIC: No Items = No Engage Button
-        // Also hides button permanently in QNA mode
-        if (vaultBtn) {
-          if (displayList.length === 0 || mode === "QNA") {
-            vaultBtn.style.display = "none";
-          } else {
-            vaultBtn.style.display = "flex";
-          }
-        }
-
-        // 4. Update Headers
-        const titleElem = document.getElementById("title-text");
-        const badgeElem = document.getElementById("view-count-badge");
-        const titleMap = {
-          new: "Primary",
-          forgot: "Active Study",
-          know: "Vault",
-          QNA: "QNA",
-        };
-
-        if (titleElem) titleElem.innerText = titleMap[mode] || "Nexus";
-        if (badgeElem) badgeElem.innerText = displayList.length;
-
-        // 5. THE "NOTHING" LOGIC: If list is empty, show nothing
-        if (displayList.length === 0) {
-          container.innerHTML = "";
-          return;
-        }
-
-        // 6. RENDER CARDS (If items exist)
-        container.innerHTML = displayList
-          .map((item) => {
-            // Generate the audio buttons
-            const audioBtns = `${getAudioBtn("Term", item.term_path || "", item.id, "term")} ${getAudioBtn("Def", item.def_path || "", item.id, "def")}`;
-
-            let actionBtns = "";
-            if (!item.isStatic) {
-              const statusActions = {
-                new: `<button class="btn-action" style="color:var(--success)" onclick="move(${item.id}, 'know')">Know</button>
-                          <button class="btn-action" onclick="move(${item.id}, 'forgot')">Study</button>`,
-                forgot: `<button class="btn-action" style="color:var(--success)" onclick="move(${item.id}, 'know')">Mastered</button>`,
-                know: `<button class="btn-action" onclick="move(${item.id}, 'forgot')">Review</button>`,
-              };
-              actionBtns = `
-                    <button class="btn-action" style="color:var(--accent)" onclick="toggleEdit(${item.id})">Edit</button>
-                    ${statusActions[item.status] || ""}
-                    <button class="btn-action btn-delete" style=" margin-right: 10px;" onclick="deleteItem(${item.id})">DEL</button>
-                    ${audioBtns}`;
-            }
-            // else {
-            //   actionBtns = audioBtns;
-            // }
-
-            return `
-                  <div class="card-item" id="card-${item.id}">
-                    <div class="card-header" onclick="toggle(this)">
-                      <h3 id="term-${item.id}" class="termTitle">${item.term}</h3>
-                      <span class="expand-icon">▽</span>
-                    </div>
-                    <div class="card-content">
-                      <div style="min-height: 0;">
-                        <p id="def-${item.id}" style="color:var(--text-muted); line-height:1.6; margin:15px 0; white-space: pre-wrap;">${item.def}</p>
-                        <div class="action-column">${actionBtns}</div>
-                      </div>
-                    </div>
-                  </div>`;
-          })
-          .join("");
-      }
-
-      function toggleEdit(id) {
-        const termEl = document.getElementById(`term-${id}`);
-        const defEl = document.getElementById(`def-${id}`);
-        const isEditing = termEl.contentEditable === "true";
-
-        // Toggle Text Fields
-        termEl.contentEditable = !isEditing;
-        defEl.contentEditable = !isEditing;
-
-        // Toggle visibility of Play buttons vs Edit inputs
-        const inputs = document.querySelectorAll(
-          `#card-${id} .path-edit-input`,
-        );
-        const buttons = document.querySelectorAll(
-          `#card-${id} .audio-btn-wrapper button`,
-        );
-
-        inputs.forEach((i) => (i.style.display = isEditing ? "none" : "block"));
-        buttons.forEach(
-          (b) => (b.style.display = isEditing ? "block" : "none"),
-        );
-
-        if (!isEditing) {
-          event.target.innerText = "SAVE";
-        } else {
-          event.target.innerText = "Edit";
-          saveEdit(id);
-        }
-      }
-      function saveEdit(id) {
-        const termEl = document.getElementById(`term-${id}`);
-        const defEl = document.getElementById(`def-${id}`);
-        const newTermPath = document.getElementById(`input-term-${id}`).value;
-        const newDefPath = document.getElementById(`input-def-${id}`).value;
-
-        const itemIndex = db.findIndex((i) => i.id === id);
-        if (itemIndex !== -1) {
-          db[itemIndex].term = termEl.innerText.trim();
-          db[itemIndex].def = defEl.innerText.trim();
-          db[itemIndex].term_path = newTermPath;
-          db[itemIndex].def_path = newDefPath;
-          render();
-        }
-      }
-
-      function getAudioBtn(label, path, id, type) {
-        stopAudio(); // <--- CRITICAL
-        const displayPath = path || "";
-        return `
-                <span id="container-${type}-${id}" class="audio-btn-wrapper" style="display: inline-flex; align-items: center;">
-                    <button class="btn-action" id="btn-${type}-${id}" onclick="handleAudioBtnClick('${id}', '${type}')">
-                       ${label}
-                    </button>
-                    <input type="text" id="input-${type}-${id}" value="${displayPath}"
-                           class="path-edit-input" style="display:none; margin-left: 5px;" placeholder="Enter path..." />
-                </span>`;
-      }
-      function handleAudioBtnClick(id, type) {
-        const pathInput = document.getElementById(`input-${type}-${id}`);
-        const path = pathInput.value;
-
-        if (path) {
-          // Use the unified controller
-          playSpecificAudio(path);
-        } else {
-          alert("No path defined for this " + type);
-        }
-      }
-
-      // Correct implementation for your popup or card elements
-      function playSpecificAudio(path) {
-        if (!path) return;
-
-        // 1. Terminate any currently playing audio stream
-        stopAudio();
-
-        // 2. Instantiate new stream
-        currentAudio = new Audio(path);
-
-        // 3. Play and handle errors
-        currentAudio.play().catch((e) => console.error("Playback failed:", e));
-
-        // 4. Cleanup reference when finished
-        currentAudio.onended = () => {
-          if (currentAudio) currentAudio = null;
-        };
-      }
-
-      function exportData() {
-        if (!fileImported) {
-          alert("No file to export.");
-          return;
-        }
-        // This remains highly important since memory clears on refresh!
-        const blob = new Blob([JSON.stringify(db)], {
-          type: "application/json",
-        });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = "nexus.json";
-        link.click();
-        URL.revokeObjectURL(url); // Cleanup memory
-      }
-
-      function importData() {
-        const input = document.createElement("input");
-        input.type = "file";
-        input.accept = ".json";
-
-        input.onchange = (e) => {
-          fileImported = e.target.files[0]; // Correctly assigned to global variable
-          if (!fileImported) return;
-
-          const display = document.getElementById("file-display");
-          if (display) {
-            display.innerText = fileImported.name.replace(".json", "");
-            display.style.color = "var(--accent)";
-          }
-
-          const reader = new FileReader();
-          reader.readAsText(fileImported);
-          reader.onload = (re) => {
-            try {
-              db = JSON.parse(re.target.result);
-              render();
-            } catch (err) {
-              alert("Invalid backup file.");
-            }
-          };
-        };
-        input.click();
-      }
-      function toggle(header) {
-        if (!header) return;
-        const item = header.closest(".card-item"); // Safer than parentElement
-        const isOpen = item.classList.contains("open");
-
-        // Close all cards (Accordion behavior)
-        document
-          .querySelectorAll(".card-item")
-          .forEach((card) => card.classList.remove("open"));
-
-        // Toggle the current one
-        if (!isOpen) {
-          item.classList.add("open");
-        }
-      }
-
+      //       --- toggle sidebar show up ---
       function toggleSidebar() {
         const fullSidebar = document.querySelector(".sidebar");
         const miniSidebar = document.getElementById("sidebar-mini");
@@ -4402,48 +4337,7 @@ This experience helped me strengthen my communication skills and ability to work
           document.getElementById("overlay").classList.toggle("active");
         }
       }
-
-      function updateStats() {
-        // 1. Calculate counts in a single pass for better performance
-        const counts = db.reduce(
-          (acc, item) => {
-            acc[item.status] = (acc[item.status] || 0) + 1;
-            return acc;
-          },
-          { new: 0, forgot: 0, know: 0 },
-        );
-
-        // 2. Safely update UI elements
-        const elements = {
-          "count-new": counts.new,
-          "count-forgot": counts.forgot,
-          "count-know": counts.know,
-        };
-
-        for (const [id, val] of Object.entries(elements)) {
-          const el = document.getElementById(id);
-          if (el) el.innerText = val;
-        }
-
-        // 3. Update Mastery Bar
-        const total = db.length;
-        const pct = total === 0 ? 0 : Math.round((counts.know / total) * 100);
-
-        const pctText = document.getElementById("mastery-pct");
-        const pctFill = document.getElementById("mastery-fill");
-
-        if (pctText) pctText.innerText = `${pct}%`;
-        if (pctFill) pctFill.style.width = `${pct}%`;
-      }
-
-      function handleNav(mode) {
-        switchMode(mode);
-
-        // If on mobile, close the sidebar after selection (YouTube style)
-        if (window.innerWidth <= 768) {
-          toggleSidebar(false);
-        }
-      }
+      //       --- show/hide grammer sidenav archive ---
       function togglePdfSubmenu() {
         const submenu = document.getElementById("pdf-submenu");
         const arrow = document.getElementById("pdf-arrow");
@@ -4467,68 +4361,13 @@ This experience helped me strengthen my communication skills and ability to work
         }
       }
 
-      function handleSearchInput() {
-        const input = document.getElementById("global-search");
-        const clearBtn = document.getElementById("clear-searchWEB_SIDE");
-
-        // Show "X" if there is text, hide if empty
-        clearBtn.style.display = input.value.length > 0 ? "block" : "none";
-
-        // Existing render logic
-        render();
-      }
-      function clearSearchInput() {
-        const input = document.getElementById("global-search");
-        const clearBtn = document.getElementById("clear-searchWEB_SIDE");
-
-        // Clear the value
-        input.value = "";
-
-        // Hide the "X"
-        clearBtn.style.display = "none";
-
-        // Refresh the UI
-        render();
-      }
-      function showView(viewId) {
-        // 1. Hide all views
-        document
-          .querySelectorAll(".view")
-          .forEach((v) => v.classList.remove("active"));
-
-        // 2. Show the specific view
-        const targetView = document.getElementById(viewId);
-        if (targetView) {
-          targetView.classList.add("active");
-        }
-
-        // 3. Focus logic for Search View
-        if (viewId === "view-search") {
-          const fileSelector = document.getElementById("file-selector");
-          const searchInput = document.getElementById("search-input");
-
-          // Check if files exist AND the input exists
-          if (
-            fileSelector &&
-            fileSelector.files &&
-            fileSelector.files.length > 0 &&
-            searchInput
-          ) {
-            // Small delay allows the DOM to render the "active" class and layout changes
-            setTimeout(() => {
-              searchInput.focus();
-              // Optional: Highlight text for immediate typing
-              searchInput.select();
-            }, 50);
-          }
-        }
-      }
-
+      // --- Event Listeners ---
       window.addEventListener("resize", () => {
         if (window.innerWidth <= 768) {
           toggleSidebar(false);
         }
       });
+      //      --- Global Keyboard Shortcuts ---
       document.addEventListener("keydown", (e) => {
         if ((e.ctrlKey || e.metaKey) && e.key === "f") {
           e.preventDefault(); // Prevent browser's default find bar
@@ -4593,6 +4432,7 @@ This experience helped me strengthen my communication skills and ability to work
           }
         }
       });
+      //      --- Files Selector in Global Search ---
       document
         .getElementById("file-selector")
         .addEventListener("change", (e) => {
@@ -4612,10 +4452,12 @@ This experience helped me strengthen my communication skills and ability to work
             }, 100);
           }
         });
+      //      --- Initial Load go to the hero-page ---
       window.onload = () => {
         switchMode("desc");
         render();
       };
+      //      --- Unsaved Changes Warning ---
       window.onbeforeunload = function () {
         if (
           db.length > 0 ||
